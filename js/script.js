@@ -74,3 +74,21 @@ document.querySelector('.bot__item').addEventListener('click', e => {
         _('.bot__menu').removeAttribute('data-page');
     };
 });
+
+var poap__fin = _('.poap');
+
+function opcl__poap() {
+    if (poap__fin.classList.contains('show') === false) {
+        _('.poap__forms').removeAttribute('style');
+        _('.poap__success').removeAttribute('style');
+    };
+    poap__fin.classList.toggle('show');
+};
+
+function success_send() {
+    _('.poap__forms').style.cssText = 'opacity: 0; z-index: -1';
+    setTimeout(500, _('.poap__forms').style.display = "none");
+    _('.poap__success').style.cssText = 'opacity: 1; z-index: 9999';
+    setTimeout(500, _('.poap__success').style.display = "flex");
+};
+

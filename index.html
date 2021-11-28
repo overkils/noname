@@ -443,9 +443,56 @@
                     <span class="help__subtitle">Наши дизайнеры и строители сделают все, чтобы ваше новоселье
                         состоялось</span>
                 </h2>
-                <button class="help__btn" type="button">
+                <button class="help__btn" type="button" onclick="opcl__poap()">
                     Просмотреть
                 </button>
+            </div>
+            <!-- поапап помощи -->
+            <div class="poap">
+                <div class="poap__help">
+                    <button class="poap__cls-btn" type="button" onclick="opcl__poap()">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.41406 0L0 1.41406L7.29297 8.70703L0 16L1.41406 17.4141L8.70703 10.1211L16 17.4141L17.4141 16L10.1211 8.70703L17.4141 1.41406L16 0L8.70703 7.29297L1.41406 0Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                    <div class="poap__forms">
+                        <div class="poap__text">
+                            <h2 class="poap__title">Поможем в подборе мебели
+                            </h2>
+                            <span class="poap__subtitle">Наши консультанты помогут вам подобрать вариант для вашего
+                                бюджета
+                            </span>
+                        </div>
+                        <form action="#" class="poap__form">
+                            <input type="text" id="name" class="poap__input" placeholder="Имя" maxlength="46">
+                            <input type="tel" id="tel" class="poap__input" placeholder="+38(0__)">
+                            <input type="email" id="email" class="poap__input" placeholder="E-mail"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <button type="submit" class="poap__btn" onclick="success_send()">Отправить</button>
+                        </form>
+                    </div>
+                    <div class="poap__success">
+                        <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M34.5 0C15.4666 0 -6.31348e-05 15.4667 1.93288e-10 34.5C-6.31348e-05 53.5337 15.4666 69 34.5 69C53.5334 69 69.0001 53.5337 69 34.5C69.0001 15.4667 53.5334 0 34.5 0ZM34.5 3.45C51.6688 3.45 65.5501 17.3314 65.55 34.5C65.5501 51.6689 51.6688 65.55 34.5 65.55C17.3312 65.55 3.44994 51.6689 3.45 34.5C3.44994 17.3314 17.3312 3.45 34.5 3.45Z"
+                                fill="#08266E" />
+                            <path
+                                d="M48.5322 23L31.1714 41.23L22.3351 32.9287L20 35.3795L31.3041 46L51 25.3191L48.5322 23Z"
+                                fill="#08266E" />
+                        </svg>
+                        <div class="succses__text">
+                            <h2 class="success__title">
+                                Заявка оформлена
+                            </h2>
+                            <span class="success__subtitle">
+                                Мы закупаем образцы и отправим их новой почтой, а вы получите номер ТТН в СМС.
+                            </span>
+                            <span class="success__alt-text">Надеемся один из вариантов вам точно понравится </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="help-form">
@@ -455,7 +502,7 @@
                     <a href="#" class="help-form__question">?</a>
                 </div>
                 <form action="#" class="help__form">
-                    <input type="tel" id="telephone" class="form__input-tel" placeholder="+38(0_)">
+                    <input type="tel" id="telephone" class="form__input-tel" placeholder="+38(0__)">
                     <input type="submit" class="form__input-btn">
                 </form>
             </div>
@@ -684,7 +731,8 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script>
         $(function () {
-            $("#telephone").mask("+38(09)999-99-99");
+            $("#telephone").mask("+38(099)999-99-99");
+            $("#tel").mask("+38(099)999-99-99");
         });
     </script>
 </body>
