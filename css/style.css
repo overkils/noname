@@ -396,8 +396,15 @@ html {
     padding-top: 36px;
     padding-bottom: 26px;
     background-color: #fff;
-    max-width: 257px;
-    max-height: 353px;
+    max-width: 255px;
+    max-height: 351px;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.sliders__items:hover,
+.sliders__items:active {
+    border: 2px solid var(--color-text);
 }
 
 .items__img {
@@ -838,7 +845,6 @@ html {
 
 .ideas__tickets {
     display: flex;
-    justify-content: space-between;
 }
 
 .ideas__ticket {
@@ -846,15 +852,53 @@ html {
     flex-direction: column;
 }
 
-.ticket__img {
-    max-width: 585px;
-    max-height: 348px;
+.ideas__ticket:not(:last-child) {
+    margin-right: 30px;
+}
+
+.ideas__img-cont {
+    max-width: 587px;
+    max-height: 350px;
     margin-bottom: 13px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 10;
+}
+
+.ideas__img-cont::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.ticket__img {
+    max-width: 583px;
+    max-height: 346px;
+}
+
+.ideas__ticket:hover > .ideas__img-cont {
+    border: 2px solid var(--color-text);
+    background-color: #08266e;
+}
+
+.ideas__ticket:active > .ideas__img-cont::after {
+    background-color: rgba(8, 38, 110, 0.2);
+}
+
+.ideas__ticket:hover > .ticket__text {
+    color: var(--color-text);
 }
 
 .ticket__text {
     font-size: 24px;
     line-height: 32px;
+    transition: all 0.3s;
 }
 
 .partners {
