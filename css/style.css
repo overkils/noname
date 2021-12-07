@@ -248,6 +248,7 @@ html {
 
 .header-slider {
     position: relative;
+    overflow: hidden;
 }
 
 .slider__item {
@@ -392,12 +393,12 @@ html {
 .sliders__items {
     display: flex;
     flex-direction: column;
-    padding: 0 19px;
+    padding: 0 16px;
     padding-top: 36px;
     padding-bottom: 26px;
     background-color: #fff;
-    max-width: 255px;
-    max-height: 351px;
+    max-width: 261px !important;
+    max-height: 353px !important;
     border: 2px solid transparent;
     transition: border 0.3s;
 }
@@ -419,6 +420,7 @@ html {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
+    max-width: 260px;
 }
 
 .items__color {

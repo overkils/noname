@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.pagination > a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.arrow-pagination {
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding-top: 7px;
+}
+
+.active-page {
+    width: 34px;
+    height: 34px;
+    background-color: #08266e;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: #fff;
+    padding-top: 6px;
+}

@@ -1,0 +1,363 @@
+.filters {
+    z-index: 400;
+}
+
+.header__bot-nav {
+    padding-bottom: 50px;
+}
+
+.sample__title {
+    color: #000;
+    margin-bottom: 32px;
+}
+
+.sample__nav {
+    display: flex;
+}
+
+.sample__nav-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.sample__nav-item:nth-child(1) {
+    margin-right: 184px;
+}
+
+.sample__nav-item:nth-child(2) {
+    margin-right: 104px;
+}
+
+.sample__nav-item:nth-child(3) {
+    margin-right: 130px;
+}
+
+.sample__type {
+    color: #555048;
+}
+
+.type__header {
+    margin-bottom: 30px;
+    z-index: -1;
+}
+
+.show > .type__header > .sample__caption,
+.show > .type__header > .sample_title,
+.show > .type__header > .sample__arrow {
+    color: #08266e;
+}
+
+.show > .type__header > .sample__arrow {
+    border-color: #08266e;
+    transform: rotate(225deg);
+}
+
+.sample__caption {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    color: #555048;
+    transition: color 0.3s;
+}
+
+.sample__arrow {
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    border-bottom: 1px solid #555048;
+    border-right: 1px solid #555048;
+    transform: rotate(45deg);
+    margin-bottom: 3px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.sample_title {
+    display: block;
+    color: #555048;
+    transition: color 0.3s;
+}
+
+.show > .type__chosing,
+.show > .box {
+    z-index: 10;
+    transform: translateY(70px);
+}
+
+.type__chosing {
+    background-color: #f8f6fb;
+    padding: 26px 24px;
+    width: 245px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transform: translateY(-700px);
+    z-index: -1;
+    transition: z-index 1.5s, transform 0.7s;
+}
+
+.box {
+    max-width: 241px;
+    padding: 20px;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateY(-700px);
+    background-color: #f8f6fb;
+    transition: z-index 1.5s, transform 0.7s;
+}
+
+.type__chosing::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    width: 190px;
+    background-color: #08266e;
+}
+
+.type__container {
+    display: flex;
+}
+
+.type__label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.type__label::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -25px;
+}
+
+.type__input {
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    margin-right: 10px;
+    border: 1px solid #000;
+    border-radius: 0;
+    box-shadow: none;
+    outline-color: transparent;
+    appearance: none;
+    cursor: pointer;
+}
+
+.type__input:checked + .type__label::before {
+    content: url("data:image/svg+xml,%3Csvg width='12' height='15' viewBox='0 0 12 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 8L6 13L10.5 1' stroke='%2308266E' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+.select__submit {
+    margin-top: 11px;
+    border: 1px solid #08266e;
+    padding: 6px 27px;
+    color: #08266e;
+    background-color: transparent;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.select__submit:hover,
+.select__submit:active {
+    background-color: #08266e;
+    border-color: transparent;
+    color: #f8f6fb;
+}
+
+.sample__first {
+    display: grid;
+    grid-template-columns: repeat(4, 295px);
+    column-gap: 6px;
+    row-gap: 6px;
+    margin-bottom: 6px;
+}
+
+.sliders__items {
+    max-width: 295px !important;
+    max-height: 415px !important;
+    position: relative;
+}
+
+.items__discount {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    background-color: #edd453;
+    width: 56px;
+    height: 56px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 17px;
+}
+
+.help-form {
+    position: relative;
+}
+
+.sample__second {
+    display: grid;
+    grid-template-columns: repeat(4, 295px);
+    column-gap: 6px;
+    row-gap: 6px;
+    margin-bottom: 50px;
+}
+
+.box::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    width: 190px;
+    background-color: #08266e;
+}
+
+.form__fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.separator {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+.sample__buy {
+    margin-top: 4px;
+    margin-left: 9px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #555048;
+}
+
+.form__field {
+    max-width: 66px;
+    padding: 2px 0;
+    padding-left: 7px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.form__field::placeholder {
+    color: #999;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.form__item {
+    margin-bottom: 10px;
+}
+
+.irs--round .irs-bar {
+    background-color: #08266e;
+    height: 1px;
+    top: 30px;
+}
+
+.irs--round .irs-line {
+    background-color: #999;
+    height: 1px;
+    top: 30px;
+}
+
+.irs--round .irs-handle {
+    width: 9px;
+    height: 9px;
+    border: 1px solid #08266e;
+}
+
+.form__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sample_title-cont > span {
+    color: #555048;
+}
+
+.sample_title-cont > span:not(:last-child) {
+    margin-right: -4px;
+}
+
+.radio__container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.radio__input {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 2px;
+    appearance: none;
+    margin-right: 10px;
+    position: relative;
+}
+
+.radio__label {
+    margin-top: 3px;
+    position: relative;
+}
+
+.radio__input:checked + .radio__label::before {
+    background-color: #08266e;
+}
+
+.radio__label::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -25.5px;
+    background-color: transparent;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.pagination,
+.sample {
+    position: relative;
+}
+
+.sample {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.shadow.activ {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(79, 79, 79, 0.5);
+    transition: all 0.3s;
+}

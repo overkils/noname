@@ -1,11 +1,3 @@
-function _(elem) {
-    return document.querySelector(`${elem}`)
-}
-
-function __(elem) {
-    return document.querySelectorAll(`${elem}`)
-}
-
 const swiper = new Swiper('.header-slider', {
     loop: true,
     speed: 850,
