@@ -1,0 +1,154 @@
+.sample__type > .type__chosing {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+.type__title {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.type__select-cont {
+    position: relative;
+}
+
+.type__select {
+    margin-bottom: 12px;
+    height: 26px;
+    appearance: none;
+    border-radius: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-color: #000;
+    width: 100%;
+}
+
+.select__arrow {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+    top: 7px;
+    right: 10px;
+    transition: transform ease 0.3s, top ease 0.3s;
+    z-index: 0;
+}
+
+.showing + .select__arrow {
+    transform: rotate(225deg);
+}
+
+.radio__label::before {
+    left: -26.3px;
+}
+
+.type__select-cont,
+.type__select-contSec {
+    display: flex;
+    flex-direction: column;
+    max-width: 177px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding-left: 7px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    position: relative;
+}
+
+.type__select-cont::after,
+.type__select-contSec::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    right: 27px;
+}
+
+.select__options {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 30px;
+    left: 0;
+    background-color: #fff;
+    width: 175px;
+    padding: 5px;
+    z-index: 10;
+}
+
+.type__select-cont[data-state="active"] > .select__options,
+.type__select-contSec[data-state="active"] > .select__options {
+    display: flex;
+}
+
+.type__select-cont[data-state="active"] > .select__arrow,
+.type__select-contSec[data-state="active"] > .select__arrow {
+    transform: rotate(225deg);
+    top: 12px;
+}
+
+.option__input {
+    display: none;
+}
+
+.select__title {
+    display: block;
+}
+
+.option__label,
+.select__title {
+    font-family: "Open sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.select__submit {
+    max-width: 144px;
+}
+
+.option__label {
+    background-color: transparent;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.option__label:hover {
+    background-color: var(--color-text);
+    color: #fff;
+}
+
+.partn-sliders__item {
+    display: grid;
+    grid-template-columns: repeat(4, 295px);
+    grid-template-rows: repeat(auto, 416px);
+    column-gap: 6px;
+    row-gap: 6px;
+}
+
+.partn-sliders__items {
+}
+.items__img-partn {
+}
+
+.companys {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.shadow.activ {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(79, 79, 79, 0.5);
+    transition: all 0.3s;
+}

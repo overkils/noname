@@ -20,18 +20,20 @@
     flex-direction: column;
     position: relative;
     cursor: pointer;
+    max-width: 140px;
+    width: 100%;
 }
 
 .sample__nav-item:nth-child(1) {
-    margin-right: 184px;
+    margin-right: 105px;
 }
 
 .sample__nav-item:nth-child(2) {
-    margin-right: 104px;
+    margin-right: 102px;
 }
 
 .sample__nav-item:nth-child(3) {
-    margin-right: 130px;
+    margin-right: 101px;
 }
 
 .sample__type {
@@ -333,8 +335,8 @@
 .radio__label::before {
     content: "";
     position: absolute;
-    top: 4px;
-    left: -25.5px;
+    top: 3.75px;
+    left: -26.5px;
     background-color: transparent;
     width: 13px;
     height: 13px;

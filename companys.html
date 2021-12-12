@@ -11,20 +11,24 @@
         rel="preload">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/sample.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/companys.css">
+    <title>Партнеры</title>
 </head>
 
 <body>
+
     <header class="header">
         <div class="container">
             <div class="header__top-nav">
-                <a href="#" class="header__logo">
+                <a href="index.html" class="header__logo">
                     Logo
                 </a>
                 <nav class="header__btn-about">
                     <ul class="btn__item">
                         <li class="btn__items">
-                            <a href="o-nas.html" class="btn__link">
+                            <a href="#" class="btn__link">
                                 О нас
                             </a>
                         </li>
@@ -203,384 +207,157 @@
             </nav>
         </div>
     </header>
-    <main class="main">
-        <section class="header-slider">
-            <ul class="slider__item swiper-wrapper">
-                <li class="slider__items swiper-slide" style="background-image: url(image/header__slider-bg.jpg);">
-                    <div class="container">
-                        <div class="items__contents">
-                            <span class="items__title">Ваш шедевр готов!</span>
-                            <span class="items__subtitle">Уютная спальня в вашей квартире</span>
-                        </div>
-                        <button class="items__btn" type="button">Просмотреть</button>
-                    </div>
-                </li>
-                <li class="slider__items swiper-slide" style="background-image: url(image/header__slider-bg.jpg);">
-                    <div class="container">
-                        <div class="items__contents">
-                            <span class="items__title">Ваш шедевр готов!</span>
-                            <span class="items__subtitle">Уютная спальня в вашей квартире</span>
-                        </div>
-                        <button class="items__btn" type="button">Просмотреть</button>
-                    </div>
-                </li>
-                <li class="slider__items swiper-slide" style="background-image: url(image/header__slider-bg.jpg);">
-                    <div class="container">
-                        <div class="items__contents">
-                            <span class="items__title">Ваш шедевр готов!</span>
-                            <span class="items__subtitle">Уютная спальня в вашей квартире</span>
-                        </div>
-                        <button class="items__btn" type="button">Просмотреть</button>
-                    </div>
-                </li>
-                <li class="slider__items swiper-slide" style="background-image: url(image/header__slider-bg.jpg);">
-                    <div class="container">
-                        <div class="items__contents">
-                            <span class="items__title">Ваш шедевр готов!</span>
-                            <span class="items__subtitle">Уютная спальня в вашей квартире</span>
-                        </div>
-                        <button class="items__btn" type="button">Просмотреть</button>
-                    </div>
-                </li>
-            </ul>
-            <div class="slider__controls">
-                <div class="container">
-                    <div class="controls__btns">
-                        <button class="controls__arrow swiper-button-prev arrow-prev">
-                            <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 17L1 9L9 1" stroke="black" />
-                            </svg>
-
-                        </button>
-                        <button class="controls__arrow swiper-button-next arrow-next">
-                            <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L9 9L0.999997 17" stroke="black" />
-                            </svg>
-
-                        </button>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                </div>
-            </div>
-        </section>
-        <section class="catalog">
+    <main>
+        <section class="filters">
             <div class="container">
-                <div class="catalog__btn">
-                    <a href="sample.html    " class="catalog__about">Смотреть все</a>
-                </div>
-                <div class="catalog__slders-cont">
-                    <div class="catalog__sliders">
-                        <div class="sliders__item swiper-wrapper">
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
+                <div class="sample__header">
+                    <h2 class="sample__title">
+                        Партнеры
+                    </h2>
+                    <nav class="sample__nav">
+                        <div class="sample__nav-item sample__type">
+                            <div class="type__header">
+                                <span class="sample__caption">Фильтр</span>
+                                <span class="sample__arrow"></span>
+                                <span class="sample_title sample__title-select">Категория/Тип</span>
+                            </div>
+                            <form class="type__chosing">
+                                <span class="type__title">Категория</span>
+                                <div class="type__select-cont">
+                                    <span class="select__title" data-state>Значение 1</span>
+                                    <span class="select__arrow"></span>
+                                    <div class="select__options">
+                                        <input id="first-select1" type="radio" class="option__input" checked>
+                                        <label for="first-select1" class="option__label">Значение 1</label>
+                                        <input id="first-select2" type="radio" class="option__input">
+                                        <label for="first-select2" class="option__label">Значение 2</label>
+                                        <input id="first-select3" type="radio" class="option__input">
+                                        <label for="first-select3" class="option__label">Значение 3</label>
+                                        <input id="first-select4" type="radio" class="option__input">
+                                        <label for="first-select4" class="option__label">Значение 4</label>
+                                    </div>
                                 </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
+                                <span class="type__title">Тип</span>
+                                <div class="type__select-contSec">
+                                    <span class="select__title" data-state>Значение 1</span>
+                                    <span class="select__arrow"></span>
+                                    <div class="select__options">
+                                        <input id="second-select1" type="radio" class="option__input" checked>
+                                        <label for="second-select1" class="option__label">Значение 1</label>
+                                        <input id="second-select2" type="radio" class="option__input">
+                                        <label for="second-select2" class="option__label">Значение 2</label>
+                                        <input id="second-select3" type="radio" class="option__input">
+                                        <label for="second-select3" class="option__label">Значение 3</label>
+                                        <input id="second-select4" type="radio" class="option__input">
+                                        <label for="second-select4" class="option__label">Значение 4</label>
+                                    </div>
                                 </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
-                            <a href="#" class="sliders__items swiper-slide">
-                                <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
-                                <div class="items__stats">
-                                    <span class="items__color">10 цветов</span>
-                                    <span class="items__recalls">Отзывов 80</span>
-                                </div>
-                                <div class="items__param">
-                                    <span class="items__name">Комод название мебели</span>
-                                    <span class="items__prices">122 800 грн</span>
-                                </div>
-                            </a>
+                                <button class="select__submit" type="submit">
+                                    Применить
+                                </button>
+                            </form>
                         </div>
-                    </div>
-                    <button class="catalog__prev catalog__arrow">
-                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 17L1 9L9 1" stroke="black" />
-                        </svg>
-
-                    </button>
-                    <button class="catalog__next catalog__arrow">
-                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L9 9L0.999997 17" stroke="black" />
-                        </svg>
-                    </button>
-                    <div class="swiper__scrollbar"></div>
-                </div>
-                <div class="catalog__ticket">
-                    <div class="catalog__tickets">
-                        <div class="tickets__about">
-                            <span class="tickets__title">Хотите купить сейчас ?</span>
-                            <span class="tickets__subtitle">Забирайте желание сразу, а платите потом - с InRooms</span>
+                        <div class="sample__nav-item sample__top">
+                            <div class="type__header">
+                                <span class="sample__caption">Тип</span>
+                                <span class="sample__arrow"></span>
+                                <span class="sample_title">Квадрат</span>
+                            </div>
+                            <form class="type__chosing">
+                                <div class="radio__container">
+                                    <input type="checkbox" id="radiobox1" class="radio__input">
+                                    <label for="radiobox1" class="radio__label">
+                                        Комоды
+                                    </label>
+                                </div>
+                                <div class="radio__container">
+                                    <input type="checkbox" id="radiobox2" class="radio__input">
+                                    <label for="radiobox2" class="radio__label">
+                                        Кровати
+                                    </label>
+                                </div>
+                                <button class="select__submit" type="submit">
+                                    Применить
+                                </button>
+                            </form>
                         </div>
-                        <img src="image/tickets1.png" alt="Изображение карточки" class="tickets__img">
-                        <svg width="587" height="63" viewBox="0 0 587 63" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1 11.0559C60.5369 1.26338 207.506 -10.0149 319.087 23.2121C430.669 56.439 543.521 40.4334 586 28.2772"
-                                stroke="white" stroke-opacity="0.4" />
-                            <path
-                                d="M1 40.0331C60.3333 30.2285 211.8 -1.42357 323 31.8446C434.2 65.1128 543.667 67.4185 586 55.2473"
-                                stroke="white" stroke-opacity="0.4" />
-                        </svg>
-                        <a href="#" class="tickets__question">?</a>
-                    </div>
-                    <div class="catalog__tickets">
-                        <div class="tickets__about">
-                            <span class="tickets__title">Скидки на мебель</span>
-                            <span class="tickets__subtitle">Покупайте мебель со скидкой - с InRooms </span>
-                        </div>
-                        <img src="image/tickets2.png" alt="Изображение карточки" class="tickets__img">
-                        <svg width="587" height="213" viewBox="0 0 587 213" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M586 11.9311C538.798 -5.08994 420.597 -16.3677 407.25 91.0289C392.687 208.209 255.658 195.249 210.575 156.676C174.593 131.645 82.981 91.0289 1 175.133"
-                                stroke="white" stroke-opacity="0.4" />
-                            <path
-                                d="M586 40.9429C538.798 23.9035 420.597 12.6137 407.25 120.126C392.687 237.432 254.299 221.421 208.062 186.344C172.08 161.286 82.981 120.126 1 204.32"
-                                stroke="white" stroke-opacity="0.4" />
-                        </svg>
-                        <a href="#" class="tickets__question">?</a>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </section>
-        <section class="help" style="background-image: url(image/help__bg.png);">
+        <section class="companys">
             <div class="container">
-                <h2 class="help__title title">
-                    Мы поможем с макетом и расстановкой
-                    <span class="help__subtitle">Наши дизайнеры и строители сделают все, чтобы ваше новоселье
-                        состоялось</span>
-                </h2>
-                <button class="help__btn" type="button" onclick="opcl__poap()">
-                    Просмотреть
-                </button>
+                <ul class="partn-sliders__item">
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img1.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img2.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img3.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img4.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img1.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img2.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img1.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img2.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img3.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img4.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img1.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                    <li class="partn-sliders__items">
+                        <img src="image/partn__img/partn__img2.png" alt="Изображение партнера" class="items__img-partn">
+                    </li>
+                </ul>
             </div>
-            <!-- поапап помощи -->
-            <div class="poap">
-                <div class="poap__help">
-                    <button class="poap__cls-btn" type="button" onclick="opcl__poap()">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1.41406 0L0 1.41406L7.29297 8.70703L0 16L1.41406 17.4141L8.70703 10.1211L16 17.4141L17.4141 16L10.1211 8.70703L17.4141 1.41406L16 0L8.70703 7.29297L1.41406 0Z"
-                                fill="black" />
-                        </svg>
-                    </button>
-                    <div class="poap__forms">
-                        <div class="poap__text">
-                            <h2 class="poap__title">Поможем в подборе мебели
-                            </h2>
-                            <span class="poap__subtitle">Наши консультанты помогут вам подобрать вариант для вашего
-                                бюджета
-                            </span>
-                        </div>
-                        <form action="#" class="poap__form">
-                            <input type="text" id="name" class="poap__input" placeholder="Имя" maxlength="46">
-                            <input type="tel" id="tel" class="poap__input" placeholder="+38(0__)">
-                            <input type="email" id="email" class="poap__input" placeholder="E-mail"
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                            <button type="submit" class="poap__btn" onclick="success_send()">Отправить</button>
-                        </form>
-                    </div>
-                    <div class="poap__success">
-                        <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M34.5 0C15.4666 0 -6.31348e-05 15.4667 1.93288e-10 34.5C-6.31348e-05 53.5337 15.4666 69 34.5 69C53.5334 69 69.0001 53.5337 69 34.5C69.0001 15.4667 53.5334 0 34.5 0ZM34.5 3.45C51.6688 3.45 65.5501 17.3314 65.55 34.5C65.5501 51.6689 51.6688 65.55 34.5 65.55C17.3312 65.55 3.44994 51.6689 3.45 34.5C3.44994 17.3314 17.3312 3.45 34.5 3.45Z"
-                                fill="#08266E" />
-                            <path
-                                d="M48.5322 23L31.1714 41.23L22.3351 32.9287L20 35.3795L31.3041 46L51 25.3191L48.5322 23Z"
-                                fill="#08266E" />
-                        </svg>
-                        <div class="succses__text">
-                            <h2 class="success__title">
-                                Заявка оформлена
-                            </h2>
-                            <span class="success__subtitle">
-                                Мы закупаем образцы и отправим их новой почтой, а вы получите номер ТТН в СМС.
-                            </span>
-                            <span class="success__alt-text">Надеемся один из вариантов вам точно понравится </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="shadow"></div>
         </section>
-        <section class="help-form">
-            <div class="container">
-                <div class="help-form__text">
-                    <h2 class="title help-form__title">Ремонт, сборка и перевозка мебели</h2>
-                    <a href="#" class="help-form__question">?</a>
-                </div>
-                <form action="#" class="help__form">
-                    <input type="tel" id="telephone" class="form__input-tel" placeholder="+38(0__)">
-                    <input type="submit" class="form__input-btn">
-                </form>
-            </div>
-        </section>
-        <section class="ideas-to-home">
-            <div class="container">
-                <h2 class="ideas__title title">Идеи для вашего дома</h2>
-                <div class="catalog__btn ideas__btn">
-                    <a href="ideas-to-home.html" class="catalog__about">Смотреть все</a>
-                </div>
-                <div class="ideas__tickets">
-                    <a href="state.html" class="ideas__ticket">
-                        <div class="ideas__img-cont">
-                            <img src="image/ticket1.png" alt="Изображение карточки" class="ticket__img">
-                        </div>
-                        <span class="ticket__text">Диван Moon, в котором живет вечер</span>
-                    </a>
-                    <a href="state.html" class="ideas__ticket">
-                        <div class="ideas__img-cont">
-                            <img src="image/ticket2.png" alt="Изображение карточки" class="ticket__img">
-                        </div>
-                        <span class="ticket__text">Индивидуальный диван и кровать Blanche...</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="partners">
-            <div class="container">
-                <h2 class="title partn__title">
-                    Партнеры
-                </h2>
-                <div class="catalog__btn partn__btn">
-                    <a href="companys.html" class="catalog__about">Смотреть все</a>
-                </div>
-                <div class="partn__slders-cont">
-                    <div class="partn__sliders">
-                        <div class="partn-sliders__item swiper-wrapper">
-                            <a href="companys-about.html" class="partn-sliders__items swiper-slide">
-                                <img src="image/partn__img/partn__img1.png" alt="Изображение партнера"
-                                    class="items__img-partn">
-                            </a>
-                            <a href="companys-about.html" class="partn-sliders__items swiper-slide">
-                                <img src="image/partn__img/partn__img2.png" alt="Изображение партнера"
-                                    class="items__img-partn">
-                            </a>
-                            <a href="companys-about.html" class="partn-sliders__items swiper-slide">
-                                <img src="image/partn__img/partn__img3.png" alt="Изображение партнера"
-                                    class="items__img-partn">
-                            </a>
-                            <a href="companys-about.html" class="partn-sliders__items swiper-slide">
-                                <img src="image/partn__img/partn__img4.png" alt="Изображение партнера"
-                                    class="items__img-partn">
-                            </a>
-                            <a href="companys-about.html" class="partn-sliders__items swiper-slide">
-                                <img src="image/partn__img/partn__img1.png" alt="Изображение партнера"
-                                    class="items__img-partn">
-                            </a>
-                            <a href="companys-about.html" class="partn-sliders__items swiper-slide">
-                                <img src="image/partn__img/partn__img2.png" alt="Изображение партнера"
-                                    class="items__img-partn">
-                            </a>
-                        </div>
-                    </div>
-                    <button class="partn__prev partn__arrow">
-                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 17L1 9L9 1" stroke="black" />
-                        </svg>
-
-                    </button>
-                    <button class="partn__next partn__arrow">
-                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L9 9L0.999997 17" stroke="black" />
-                        </svg>
-                    </button>
-                    <div class="swiper_scrollbar"></div>
-                </div>
-            </div>
-        </section>
+        <div class="pagination">
+            <a type="button" class="arrow-pagination start-page" id="start-page">
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.0039 17.4841L11.0039 9.34082L19.0039 1.1975" stroke="black" />
+                    <path d="M9.00391 17.4116L1.00391 9.26831L9.00391 1.12499" stroke="black" />
+                </svg>
+            </a>
+            <a type="button" class="arrow-pagination arrow-last-page" id="arrow-last-page">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 16.839L1 8.69567L9 0.55236" stroke="black" />
+                </svg>
+            </a>
+            <a type="button" class="penultimate-page" id="penultimate-page">1</a>
+            <a type="button" class="last-page" id="last-page">2</a>
+            <a type="button" class="active-page" id="active-page">3</a>
+            <a type="button" class="next-page" id="next-page">4</a>
+            <a type="button" class="after-page" id="after-page">5</a>
+            <a type="button" class="arrow-pagination arrow-next-page" id="arrow-next-page">
+                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.356812L9 8.50013L0.999997 16.6434" stroke="black" />
+                </svg>
+            </a>
+            <a type="button" class="arrow-pagination end-page" id="end-page">
+                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.356934L9 8.50025L0.999997 16.6436" stroke="black" />
+                    <path d="M11 0.356934L19 8.50025L11 16.6436" stroke="black" />
+                </svg>
+            </a>
+            <div class="shadow"></div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -729,18 +506,11 @@
             <span class="footer__coopyright">(с) все права защищены</span>
         </div>
     </footer>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <script src="js/search__items.js"></script>
     <script src="js/menu.js"></script>
-    <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script>
-        $(function () {
-            $("#telephone").mask("+38(099)999-99-99");
-            $("#tel").mask("+38(099)999-99-99");
-        });
-    </script>
+    <script src="js/sample_menu.js"></script>
+    <script src="js/companys.js"></script>
 </body>
 
 </html>
