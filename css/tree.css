@@ -1,0 +1,15 @@
+.tree {
+    padding-top: 35px;
+    display: flex;
+    color: #555048;
+}
+
+.tree__btn {
+    font-size: 12px;
+    margin-right: 15px;
+}
+
+.tree__separator {
+    font-size: 12px;
+    margin-right: 15px;
+}
