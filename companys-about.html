@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto&display=swap"
         rel="preload">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/tree.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/companys-about.css">
     <title>О нас</title>
@@ -19,190 +20,193 @@
 
     <header class="header">
         <div class="container">
-            <div class="header__top-nav">
+            <div class="header__top">
+                <button class="header__menu-btn">
+                    <span class="menu-btn"></span>
+                </button>
                 <a href="index.html" class="header__logo">
-                    Logo
+                    <img src="image/logo.png" alt="лого">
                 </a>
-                <nav class="header__btn-about">
-                    <ul class="btn__item">
-                        <li class="btn__items">
-                            <a href="#" class="btn__link">
-                                О нас
-                            </a>
+                <nav class="top__nav" data-da=".header__bot,992,last">
+                    <ul class="top__item">
+                        <li class="top__items">
+                            <a href="#" class="top__link">О нас</a>
                         </li>
-                        <li class="btn__items">
-                            <a href="#" class="btn__link">
-                                Клиентам
-                            </a>
+                        <li class="top__items">
+                            <a href="#" class="top__link">Клиентам</a>
                         </li>
-                        <li class="btn__items">
-                            <a href="#" class="btn__link">
-                                Партнерство
-                            </a>
+                        <li class="top__items">
+                            <a href="#" class="top__link">Партнерство</a>
                         </li>
                     </ul>
-                    <div class="switch">
-                        <button class="btn__switch btn__switch-sep">ру</button>
-                        <button class="btn__switch">укр</button>
-                    </div>
                 </nav>
+                <div class="top__switch">
+                    <button class="switch">
+                        РУ
+                    </button>
+                    <button class="switch">
+                        УКР
+                    </button>
+                </div>
+            </div>
+            <div class="header__bot">
+                <button class="bot__menu-btn">
+                    <span class="menu-btn"></span>
+                </button>
+                <button class="bot__btn" data-page="1">Мягкая мебель</button>
+                <button class="bot__btn" data-page="2">Гостинная</button>
+                <button class="bot__btn" data-page="3">Спальня</button>
+                <button class="bot__btn" data-page="4">Кухня</button>
+                <button class="bot__btn" data-page="5">Детская</button>
+                <button class="bot__btn" data-page="6">Ванная</button>
+                <button class="bot__btn" data-page="7">Прихожая</button>
+                <button class="bot__btn" data-page="8">Кабинет</button>
+                <button class="bot__btn" data-page="9">Столы</button>
+                <button class="bot__btn" data-page="10">Стулья</button>
+                <button class="bot__btn" data-page="11">Шкафы</button>
             </div>
         </div>
-        <div class="header__bot-nav">
-            <nav class="bot__nav">
-                <div class="container">
-                    <div class="bot__item">
-                        <button type="button" class="bot__link" data-page="1">Мягкая мебель</button>
-                        <button type="button" class="bot__link" data-page="2">Гостинная</button>
-                        <button type="button" class="bot__link" data-page="3">Спальня</button>
-                        <button type="button" class="bot__link" data-page="4">Кухня</button>
-                        <button type="button" class="bot__link" data-page="5">Детская</button>
-                        <button type="button" class="bot__link" data-page="6">Ванная</button>
-                        <button type="button" class="bot__link" data-page="7">Прихожая</button>
-                        <button type="button" class="bot__link" data-page="8">Кабинет</button>
-                        <button type="button" class="bot__link" data-page="9">Столы</button>
-                        <button type="button" class="bot__link" data-page="10">Стулья</button>
-                        <button type="button" class="bot__link" data-page="11">Шкафы</button>
+        <div class="header__menu">
+            <div class="container">
+                <nav class="bot__nav">
+                    <button class="bot__nav-close"></button>
+                    <button class="bot__menu-btns"></button>
+                    <div>
+                        <span class="bot__nav-title"></span>
                     </div>
-                </div>
-                <div class="bot__menu">
-                    <div class="container">
-                        <div class="menu__nav">
-                            <div class="menu__navs-item">
-                                <div class="menu__navs-items">
-                                    <span class="menu__nav-title">Диваны</span>
-                                    <ul class="menu__nav-item">
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Угловые</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Прямые</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Модульные</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Кушетки и тахны</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Кресла-диваны</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Sale</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="menu__navs-items">
-                                    <span class="menu__nav-title">Кресла</span>
-                                    <ul class="menu__nav-item">
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Угловые</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Прямые</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Модульные</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Кушетки и тахны</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Кресла-диваны</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Sale</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="menu__navs-items">
-                                    <span class="menu__nav-title">Гостинные гарнитуры</span>
-                                    <ul class="menu__nav-item">
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Модульные гостинные</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Стенки-горки</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">С нишей под ТВ</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Модерн</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">С подсветкой</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="menu__navs-items">
-                                    <span class="menu__nav-title">Журнальные столики</span>
-                                    <ul class="menu__nav-item">
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Стеклянные</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">С полками</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Модерн</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">С подстветкой</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="menu__navs-items">
-                                    <span class="menu__nav-title">Полки, модусы, подставки</span>
-                                    <ul class="menu__nav-item">
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Стеклянные полки</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Деревянные полки</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Подставка для вина</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Корпусные полки</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="menu__navs-items">
-                                    <span class="menu__nav-title">Столики для ТВ</span>
-                                    <ul class="menu__nav-item">
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Стеклянные</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">С полками</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">Модерн</a>
-                                        </li>
-                                        <li class="menu__nav-items">
-                                            <a href="#" class="menu__nav-links">С подстветкой</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                </nav>
+                <div class="header__wrapper">
+                    <div class="menu__item">
+                        <div class="menu__items">
+                            <span class="menu__title">Диваны</span>
+                            <ul class="menu__list">
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Угловые </a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Прямые</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Модульные</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Кушетки и тахны</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Кресла-диваны</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Кресла-диваны</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="menu__art">
-                            <div class="art__item">
-                                <a href="#" class="art__items">
-                                    <img src="image/menu__ticket1.png" alt="Превью" class="art__img">
-                                    <span class="art__title">Идеи для гостинной</span>
-                                </a>
-                                <a href="#" class="art__items">
-                                    <img src="image/menu__ticket2.png" alt="Превью" class="art__img">
-                                    <span class="art__title art__title-clr">-50% на аксессуары</span>
-                                </a>
-                            </div>
+                        <div class="menu__items">
+                            <span class="menu__title">Кресла</span>
+                            <ul class="menu__list">
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Угловые </a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Прямые</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Модульные</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Кушетки и тахны</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Кресла-диваны</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Кресла-диваны</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__items">
+                            <span class="menu__title">Гостинные гарнитуры</span>
+                            <ul class="menu__list">
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Модульные гостинные</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Стенки-горки</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">С нишей под ТВ</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Модерн</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">С подсветкой</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__items">
+                            <span class="menu__title">Журнальные столики</span>
+                            <ul class="menu__list">
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Стеклянные</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">С полками</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Модерн</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">С подстветкой</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__items">
+                            <span class="menu__title">Полки, модусы, подставки</span>
+                            <ul class="menu__list">
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Стеклянные полки</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Деревянные полки</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Подставка для вина</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Корпусные полки</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu__items">
+                            <span class="menu__title">Столики для ТВ</span>
+                            <ul class="menu__list">
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Стеклянные</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">С полками</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">Модерн</a>
+                                </li>
+                                <li class="b-menu__item">
+                                    <a href="#" class="menu__link">С подстветкой</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="menu__art">
+                        <a href="#" class="menu__arts">
+                            <img src="image/menu__ticket1.png" alt="" class="arts__img">
+                            <span class="arts__title">Идеи для гостинной</span>
+                        </a>
+                        <a href="#" class="menu__arts">
+                            <img src="image/menu__ticket2.png" alt="" class="arts__img">
+                            <span class="arts__title">-50% на аксессуары</span>
+                        </a>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
         <div class="header__tree">
             <div class="container">
@@ -534,6 +538,8 @@
         </div>
     </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/search__items.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/companys-about.js"></script>
 </body>

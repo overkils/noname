@@ -68,13 +68,6 @@ img {
   display: block;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
 textarea {
   resize: none;
 }

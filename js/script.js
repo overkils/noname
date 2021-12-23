@@ -14,7 +14,7 @@ const swiper = new Swiper('.header-slider', {
 
 const catalog_swiper = new Swiper('.catalog__sliders', {
     slidesPerView: 4,
-    spaceBetween: 3,
+    // spaceBetween: 3,
     navigation: {
         nextEl: '.catalog__next',
         prevEl: '.catalog__prev',
@@ -22,7 +22,7 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
     scrollbar: {
         el: ".swiper__scrollbar",
         hide: true,
-    },
+    }
 });
 
 const partn_swiper = new Swiper('.partn__sliders', {
@@ -46,6 +46,7 @@ function opcl__poap() {
         _('.poap__success').removeAttribute('style');
     };
     poap__fin.classList.toggle('show');
+    _('body').classList.toggle('scroll-lock')
 };
 
 function success_send() {

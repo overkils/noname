@@ -1,5 +1,6 @@
 .tree {
-    padding-top: 35px;
+    padding-top: 15px;
+    padding-bottom: 35px;
     display: flex;
     color: #555048;
 }
