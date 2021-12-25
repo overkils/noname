@@ -10,6 +10,7 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     // переключение/отключение активной кнопки
     data_pages = e.target.getAttribute('data-page');
     _('.header__menu').setAttribute('data-page', data_pages);
+    _('.header__menu').style.display = 'block';
     _('.bot__nav-title').textContent = e.target.textContent;
     _('.bot__nav-title').classList.toggle('active');
     e.target.toggleAttribute('activitis');
@@ -26,6 +27,7 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     var closet_menu = document.querySelector('[activitis]');
     if (closet_menu === null) {
         _('.header__menu').removeAttribute('data-page');
+        setTimeout(displayMenu, 300);
     };
 });
 
@@ -58,5 +60,9 @@ function closeMenuArrow() {
     closet_menu.classList.toggle('bot__btn-active');
     _('.header__menu').toggleAttribute('data-page');
     _('.bot__nav-title').classList.toggle('active');
+
 }
 
+function displayMenu() {
+    _('.header__menu').style.display = "none";
+}
