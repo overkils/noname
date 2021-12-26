@@ -2,14 +2,22 @@ const swiper = new Swiper('.header-slider', {
     loop: true,
     speed: 850,
     slidesPerView: 1,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
     scrollbar: {
         el: ".swiper-scrollbar",
         hide: true,
     },
+    breakpoints: {
+        992: {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        },
+
+        320: {
+            navigation: false,
+        },
+    }
 });
 
 const catalog_swiper = new Swiper('.catalog__sliders', {
@@ -22,6 +30,19 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
     scrollbar: {
         el: ".swiper__scrollbar",
         hide: true,
+    },
+    breakpoints: {
+        992: {
+            slidesPerView: 4,
+        },
+
+        768: {
+            slidesPerView: 3,
+        },
+
+        320: {
+            slidesPerView: 2,
+        },
     }
 });
 

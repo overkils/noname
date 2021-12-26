@@ -426,7 +426,7 @@ html {
         left: 0;
         top: 94px;
         width: 95vw;
-        height: 100vw;
+        height: 100vh;
         z-index: 9999;
         background: var(--bg-header);
         transform: translateX(-100vw);
@@ -666,7 +666,7 @@ html {
     border: none;
     font-size: calc(14px + 4 * ((100vw - 320px) / var(--wdith-Screen)));
     color: var(--color-recalls);
-    width: 374px;
+    width: 75%;
 }
 
 .form__input-tel::placeholder {
@@ -677,7 +677,7 @@ html {
 .form__input-btn {
     background-color: var(--color-text);
     color: #fff;
-    width: 211px;
+    width: 25%;
 }
 
 .ideas-to-home {
@@ -913,9 +913,9 @@ hr {
     height: 100vh;
 }
 
-ion-icon {
-    width: 18px;
-    height: 18px;
+.nav__cont--first,
+.nav__cont--sec {
+    display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -985,9 +985,54 @@ ion-icon {
     }
     .tickets__question {
     }
+
+    .header__menu {
+        height: 100vh;
+    }
+
+    .nav__cont--first,
+    .nav__cont--sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .footer__nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav__lists:last-child {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .nav__title {
+        font-weight: 700;
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .nav__items:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .nav__links {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .footer__socials {
+        justify-content: center;
+    }
+
+    .footer__social:first-child {
+        margin-left: unset;
+    }
+
+    .nav__lists:not(:last-child) {
+        margin-bottom: 22px;
+    }
 }
 
 @media screen and (max-width: 568px) {
