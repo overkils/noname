@@ -657,6 +657,7 @@ html {
     margin-left: auto;
     display: flex;
     max-width: 585px;
+    width: 100%;
 }
 
 .form__input-tel {
@@ -666,7 +667,8 @@ html {
     border: none;
     font-size: calc(14px + 4 * ((100vw - 320px) / var(--wdith-Screen)));
     color: var(--color-recalls);
-    width: 75%;
+    width: 100%;
+    max-width: 374px;
 }
 
 .form__input-tel::placeholder {
@@ -677,7 +679,8 @@ html {
 .form__input-btn {
     background-color: var(--color-text);
     color: #fff;
-    width: 25%;
+    max-width: 211px;
+    width: 100%;
 }
 
 .ideas-to-home {
@@ -735,7 +738,7 @@ html {
 
 .ideas__ticket:hover > .ideas__img-cont {
     border: 2px solid var(--color-text);
-    background-color: #08266e;
+    background-color: var(--color-text);
 }
 
 .ideas__ticket:active > .ideas__img-cont::after {

@@ -66,8 +66,9 @@ function opcl__poap() {
         _('.poap__forms').removeAttribute('style');
         _('.poap__success').removeAttribute('style');
     };
-    poap__fin.classList.toggle('show');
-    _('body').classList.toggle('scroll-lock')
+    poap__fin.classList.toggle('active');
+    setTimeout(toggleActivePoap, 100);
+    _('body').classList.toggle('scroll-lock');
 };
 
 function success_send() {
@@ -77,3 +78,6 @@ function success_send() {
     setTimeout(500, _('.poap__success').style.display = "flex");
 };
 
+function toggleActivePoap() {
+    poap__fin.classList.toggle('show');
+}
