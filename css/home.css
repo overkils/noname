@@ -406,13 +406,20 @@
 }
 
 @media screen and (max-width: 992px) {
-    .catalog__ticket {
+    /* .catalog__ticket {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
-    .catalog__tickets {
+    /* .catalog__tickets {
         margin-right: unset !important;
+        margin-bottom: 20px;
+        max-width: 768px; 
+    } */
+
+    .catalog__tickets:first-child > .tickets__img {
+        left: 19.5%;
+        width: 60%;
     }
 
     .controls__arrow {
@@ -425,6 +432,10 @@
 
     .header-slider > .container {
         max-width: 768px;
+    }
+
+    .help {
+        background-position-x: center;
     }
 }
 

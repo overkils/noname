@@ -23,25 +23,27 @@ const swiper = new Swiper('.header-slider', {
 const catalog_swiper = new Swiper('.catalog__sliders', {
     slidesPerView: 4,
     // spaceBetween: 3,
-    navigation: {
-        nextEl: '.catalog__next',
-        prevEl: '.catalog__prev',
-    },
+
     scrollbar: {
         el: ".swiper__scrollbar",
         hide: true,
     },
     breakpoints: {
-        992: {
+        1200: {
             slidesPerView: 4,
         },
-
+        992: {
+            navigation: {
+                nextEl: '.catalog__next',
+                prevEl: '.catalog__prev',
+            }
+        },
         768: {
             slidesPerView: 3,
         },
-
         320: {
             slidesPerView: 2,
+            navigation: false,
         },
     }
 });
@@ -49,14 +51,27 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
 const partn_swiper = new Swiper('.partn__sliders', {
     slidesPerView: 4,
     spaceBetween: 6,
-    navigation: {
-        nextEl: '.partn__next',
-        prevEl: '.partn__prev',
-    },
     scrollbar: {
         el: ".swiper_scrollbar",
         hide: true,
     },
+    breakpoints: {
+        992: {
+            slidesPerView: 4,
+            navigation: {
+                nextEl: '.partn__next',
+                prevEl: '.partn__prev',
+            },
+        },
+
+        768: {
+            slidesPerView: 3,
+        },
+
+        320: {
+            navigation: false,
+        }
+    }
 });
 
 var poap__fin = _('.poap');
