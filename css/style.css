@@ -944,6 +944,7 @@ hr {
     }
 
     .header__menu {
+        top: 73px;
         height: 100vh;
         transform: translateX(100vw);
     }
