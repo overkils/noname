@@ -9,15 +9,14 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     //проверка наличия bot__link в bot__item
     if (!e.target.classList.contains('bot__btn')) return;
     // переключение/отключение активной кнопки
-    data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
-    header_menu.style.display = 'block'; // выдаем меню block для того чтобы показать его
-    menuActive();
-    setTimeout(menuActiveS, 100);
-    replacePage();
-    _('.bot__nav-title').textContent = e.target.textContent; // переносим название кнопки в тайтл меню
-    _('.bot__nav-title').classList.toggle('active'); // выдаем активность, хотя хз нахуя я это сделал
     e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
     e.target.classList.toggle('bot__btn-active'); // а тае же класс активности для стилей 
+    data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
+    header_menu.style.display = 'block'; // выдаем меню block для того чтобы показать его
+    menuActive(); //выдача класса активности(открытого) меню
+    menuActiveS();  // отображение меню на адаптив версии 
+    replacePage(); // замена номера страницы в функции 
+    _('.bot__nav-title').textContent = e.target.textContent; // переносим название кнопки в тайтл меню
     //отключение предыдущей активной кнопки
     var activitis = document.querySelectorAll('.bot__btn-active');// ищем классы активности
     for (let i = 0; i < activitis.length; i++) { // перебираем активность и 
@@ -30,6 +29,7 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     var closet_menu = document.querySelector('[activitis]'); // ищем атрибут активности на кнопках
     if (closet_menu === null) { // если его нету то
         deletePageAttr(); // убираем атрибут номера страницы и 
+        setTimeout(removeActives, 100)
         setTimeout(displayMenu, 300); // отключаем меню для того чтоб не захломлять не поточную позиционированность 
     };
 });
@@ -81,8 +81,14 @@ function deletePageAttr() {
 }
 
 function menuActive() {
-    header_menu.classList.toggle('active');
+    header_menu.classList.add('active');
 }
+
 function menuActiveS() {
-    header_menu.classList.toggle('actives');
+    header_menu.classList.add('actives');
+}
+
+function removeActives() {
+    header_menu.classList.remove('actives');
+    header_menu.classList.remove('active');
 }

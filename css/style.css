@@ -260,13 +260,9 @@ html {
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 1px;
-}
-
-.bot__nav-title.active {
-    color: var(--color-text);
     border-bottom: 1px solid var(--color-text);
+    padding-bottom: 1px;
+    color: var(--color-text);
 }
 
 .bot__menu-btns,
@@ -308,7 +304,7 @@ html {
 
 .header__menu {
     position: absolute;
-    top: 73px;
+    top: 120px;
     left: 0;
     right: 0;
     z-index: -1;
