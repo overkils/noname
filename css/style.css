@@ -311,6 +311,7 @@ html {
     background-color: var(--bg-header);
     padding: 57px 0 64px 0;
     visibility: hidden;
+    overflow-x: hidden;
     opacity: 0;
     transition: all 0.3s, transform 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
 }
@@ -947,6 +948,7 @@ hr {
         top: 73px;
         height: 100vh;
         transform: translateX(100vw);
+        overflow-x: hidden;
     }
 
     .sliders__items {

@@ -28,3 +28,8 @@
     color: #fff;
     padding-top: 6px;
 }
+
+.penultimate-page,
+.after-page {
+    display: none;
+}
