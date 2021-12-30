@@ -308,6 +308,7 @@ html {
 
 .header__menu {
     position: absolute;
+    top: 73px;
     left: 0;
     right: 0;
     z-index: -1;
@@ -423,7 +424,7 @@ html {
         justify-content: start;
         align-items: start;
         position: absolute;
-        padding: 49px 0 82px 26px;
+        padding: 49px 0 0 26px;
         left: 0;
         top: 94px;
         width: 95vw;
@@ -448,7 +449,7 @@ html {
     }
 
     .header__menu {
-        height: 100vw;
+        height: 100vh;
         transform: translateX(100vw);
     }
 
@@ -467,6 +468,10 @@ html {
 
     .bot__nav {
         display: grid;
+    }
+
+    .menu__item {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -944,6 +949,7 @@ hr {
 
     .header__menu {
         height: 100vh;
+        transform: translateX(100vw);
     }
 
     .sliders__items {

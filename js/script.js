@@ -86,6 +86,16 @@ function opcl__poap() {
     _('body').classList.toggle('scroll-lock');
 };
 
+function cl__poap() {
+    if (poap__fin.classList.contains('show') === false) {
+        _('.poap__forms').removeAttribute('style');
+        _('.poap__success').removeAttribute('style');
+    };
+    setTimeout(`poap__fin.classList.toggle('active')`, 300)
+    toggleActivePoap();
+    _('body').classList.toggle('scroll-lock');
+};
+
 function success_send() {
     _('.poap__forms').style.cssText = 'opacity: 0; z-index: -1';
     setTimeout(500, _('.poap__forms').style.display = "none");
