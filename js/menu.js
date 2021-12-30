@@ -9,14 +9,15 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     //проверка наличия bot__link в bot__item
     if (!e.target.classList.contains('bot__btn')) return;
     // переключение/отключение активной кнопки
-    e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
-    e.target.classList.toggle('bot__btn-active'); // а тае же класс активности для стилей 
     data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
     header_menu.style.display = 'block'; // выдаем меню block для того чтобы показать его
-    menuActive(); //выдача класса активности(открытого) меню
-    menuActiveS();  // отображение меню на адаптив версии 
+    setTimeout(menuActive, 100) //выдача класса активности(открытого) меню
+    setTimeout(menuActiveS, 100); // отображение меню на адаптив версии 
     replacePage(); // замена номера страницы в функции 
     _('.bot__nav-title').textContent = e.target.textContent; // переносим название кнопки в тайтл меню
+    _('.bot__nav-title').classList.toggle('active'); // выдаем активность, хотя хз нахуя я это сделал
+    e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
+    e.target.classList.toggle('bot__btn-active'); // а тае же класс активности для стилей 
     //отключение предыдущей активной кнопки
     var activitis = document.querySelectorAll('.bot__btn-active');// ищем классы активности
     for (let i = 0; i < activitis.length; i++) { // перебираем активность и 
@@ -30,7 +31,7 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     if (closet_menu === null) { // если его нету то
         deletePageAttr(); // убираем атрибут номера страницы и 
         setTimeout(removeActives, 100)
-        setTimeout(displayMenu, 300); // отключаем меню для того чтоб не захломлять не поточную позиционированность 
+        setTimeout(displayMenu, 400); // отключаем меню для того чтоб не захломлять не поточную позиционированность 
     };
 });
 
