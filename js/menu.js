@@ -10,10 +10,11 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     if (!e.target.classList.contains('bot__btn')) return;
     // переключение/отключение активной кнопки
     data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
-    header_menu.style.display = 'block'; // выдаем меню block для того чтобы показать его
-    setTimeout(menuActive, 100) //выдача класса активности(открытого) меню
-    setTimeout(menuActiveS, 100); // отображение меню на адаптив версии 
+    toggleBlock(); // выдаем меню block для того чтобы показать его
+    menuActive(); //выдача класса активности(открытого) меню
+    setTimeout(menuActiveS, 100) // отображение меню на адаптив версии 
     replacePage(); // замена номера страницы в функции 
+    setTimeout(displayMenu, 10000);
     _('.bot__nav-title').textContent = e.target.textContent; // переносим название кнопки в тайтл меню
     _('.bot__nav-title').classList.toggle('active'); // выдаем активность, хотя хз нахуя я это сделал
     e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
@@ -30,8 +31,8 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     var closet_menu = document.querySelector('[activitis]'); // ищем атрибут активности на кнопках
     if (closet_menu === null) { // если его нету то
         deletePageAttr(); // убираем атрибут номера страницы и 
-        setTimeout(removeActives, 100)
-        setTimeout(displayMenu, 400); // отключаем меню для того чтоб не захломлять не поточную позиционированность 
+        setTimeout(removeActives, 800);
+        setTimeout(nonedisplayMenu, 400); // отключаем меню для того чтоб не захломлять не поточную позиционированность 
     };
 });
 
@@ -48,7 +49,8 @@ _('.bot__nav-close').onclick = function () { // при клике стрелки
 };
 
 menu_btn_close.onclick = function () { // при клике крестика в меню вызываем функции по скрытию всех меню и под меню
-    visibleBtn();
+    _('.header__bot').classList.toggle('active'); //выдаем класс активности для открытия меню с выбором категории
+    menu_btn.classList.toggle('active');
     closeMenuArrow();
 };
 
@@ -59,37 +61,48 @@ function replacePage() {
 function visibleBtn() {
     _('.header__bot').classList.toggle('active'); //выдаем класс активности для открытия меню с выбором категории
     menu_btn.classList.toggle('active'); // выдача класса активности меню что бы открыть меню и изменить стили
-    bot_btn.classList.toggle('active'); // выдача класса активности для стилей и обмана глаза
+    removeActives();
 };
 
 function closeMenuArrow() {
     var closet_menu = document.querySelector('[activitis]'); // ищем атрибут активности на кнопках
     closet_menu.removeAttribute('activitis'); // удаляем атрибут активности с кнопок
     closet_menu.classList.toggle('bot__btn-active'); // убираем класс активности с кнопок
-    header_menu.classList.toggle('actives');
-    setTimeout(menuActive, 600);
-    setTimeout(deletePageAttr, 300);
-    _('.bot__nav-title').classList.toggle('active'); // убираем класс активности с тайтла в меню
-    setTimeout(displayMenu, 700); // отключаем меню из потока
+    deletePageAttr();
+    menuActiveS();
+    setTimeout(menuActive, 500);
+    setTimeout(() => {
+        removeActives();
+    }, 800);
+    setTimeout(nonedisplayMenu, 900);
+};
+
+function nonedisplayMenu() {
+    header_menu.style.display = "none";
 };
 
 function displayMenu() {
-    header_menu.style.display = "none";
-};
+    header_menu.style.cssText = 'display: inline-flex;';
+}
 
 function deletePageAttr() {
     header_menu.removeAttribute('data-page'); // убираем атрибут номера страницы для деактивации стилей открытого меню
 }
 
 function menuActive() {
-    header_menu.classList.add('active');
+    header_menu.classList.toggle('active');
 }
 
 function menuActiveS() {
-    header_menu.classList.add('actives');
+    header_menu.classList.toggle('actives');
 }
 
 function removeActives() {
     header_menu.classList.remove('actives');
     header_menu.classList.remove('active');
+}
+
+function toggleBlock() {
+    displayMenu();
+
 }

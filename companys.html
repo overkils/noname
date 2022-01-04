@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/atolla-reset.css">
     <link rel="prefetch" href="css/fonts_load.css" as="font">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto&display=swap"
-        rel="preload">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto&display=swap">
+    <link rel=" stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sample.css">
     <link rel="stylesheet" href="css/pagination.css">
@@ -215,6 +214,7 @@
                     <h2 class="sample__title">
                         Партнеры
                     </h2>
+                    <button class="poap__openbtn">Фильтры и сортировка</button>
                     <nav class="sample__nav">
                         <div class="sample__nav-item sample__type">
                             <div class="type__header">
@@ -294,42 +294,42 @@
                                         <div class="block__text">
                                             <form class="type__chosing">
                                                 <span class="type__title">Категория</span>
-                                                <div class="type__select-cont">
+                                                <div class="d_type__select-cont">
                                                     <span class="select__title" data-state>Значение 1</span>
                                                     <span class="select__arrow"></span>
                                                     <div class="select__options">
-                                                        <input id="first-select1" type="radio" class="option__input"
+                                                        <input id="d-first-select1" type="radio" class="option__input"
                                                             checked>
-                                                        <label for="first-select1" class="option__label">Значение
+                                                        <label for="d-first-select1" class="option__label">Значение
                                                             1</label>
-                                                        <input id="first-select2" type="radio" class="option__input">
-                                                        <label for="first-select2" class="option__label">Значение
+                                                        <input id="d-first-select2" type="radio" class="option__input">
+                                                        <label for="d-first-select2" class="option__label">Значение
                                                             2</label>
-                                                        <input id="first-select3" type="radio" class="option__input">
-                                                        <label for="first-select3" class="option__label">Значение
+                                                        <input id="d-first-select3" type="radio" class="option__input">
+                                                        <label for="d-first-select3" class="option__label">Значение
                                                             3</label>
-                                                        <input id="first-select4" type="radio" class="option__input">
-                                                        <label for="first-select4" class="option__label">Значение
+                                                        <input id="d-first-select4" type="radio" class="option__input">
+                                                        <label for="d-first-select4" class="option__label">Значение
                                                             4</label>
                                                     </div>
                                                 </div>
                                                 <span class="type__title">Тип</span>
-                                                <div class="type__select-contSec">
+                                                <div class="d_type__select-contSec">
                                                     <span class="select__title" data-state>Значение 1</span>
                                                     <span class="select__arrow"></span>
                                                     <div class="select__options">
-                                                        <input id="second-select1" type="radio" class="option__input"
+                                                        <input id="d-second-select1" type="radio" class="option__input"
                                                             checked>
-                                                        <label for="second-select1" class="option__label">Значение
+                                                        <label for="d-second-select1" class="option__label">Значение
                                                             1</label>
-                                                        <input id="second-select2" type="radio" class="option__input">
-                                                        <label for="second-select2" class="option__label">Значение
+                                                        <input id="d-second-select2" type="radio" class="option__input">
+                                                        <label for="d-second-select2" class="option__label">Значение
                                                             2</label>
-                                                        <input id="second-select3" type="radio" class="option__input">
-                                                        <label for="second-select3" class="option__label">Значение
+                                                        <input id="d-second-select3" type="radio" class="option__input">
+                                                        <label for="d-second-select3" class="option__label">Значение
                                                             3</label>
-                                                        <input id="second-select4" type="radio" class="option__input">
-                                                        <label for="second-select4" class="option__label">Значение
+                                                        <input id="d-second-select4" type="radio" class="option__input">
+                                                        <label for="d-second-select4" class="option__label">Значение
                                                             4</label>
                                                     </div>
                                                 </div>
@@ -339,7 +339,30 @@
                                             </form>
                                         </div>
                                     </div>
-
+                                    <div class="block__item">
+                                        <div class="block__title">Сортировать по</div>
+                                        <div class="block__text">
+                                            <form class="type__chosing">
+                                                <div class="type__cont">
+                                                    <div class="radio__container">
+                                                        <input type="checkbox" id="d_radiobox1" class="radio__input">
+                                                        <label for="d_radiobox1" class="radio__label">
+                                                            Комоды
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio__container">
+                                                        <input type="checkbox" id="d_radiobox2" class="radio__input">
+                                                        <label for="d_radiobox2" class="radio__label">
+                                                            Кровати
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <button class="select__submit" type="submit">
+                                                    Применить
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

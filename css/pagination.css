@@ -4,9 +4,11 @@
     align-items: center;
     text-align: center;
     padding-bottom: 100px;
+    padding: 0 15px 100px 15px;
+    margin-right: -20px;
 }
 
-.pagination > a:not(:last-child) {
+.pagination > a {
     margin-right: 20px;
 }
 
