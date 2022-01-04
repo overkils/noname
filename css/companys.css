@@ -224,6 +224,11 @@
         max-width: 180px;
     }
 
+    .partn-sliders__items > img {
+        width: 75%;
+        max-width: unset;
+    }
+
     .sample__nav {
         display: none;
     }
@@ -378,6 +383,11 @@
 
     .partn-sliders__items {
         max-width: 295px;
+    }
+
+    .partn-sliders__items > img {
+        width: unset;
+        max-width: 100%;
     }
 }
 
