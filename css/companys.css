@@ -386,7 +386,7 @@
     }
 
     .partn-sliders__items > img {
-        width: unset;
+        width: 75%;
         max-width: 100%;
     }
 }
