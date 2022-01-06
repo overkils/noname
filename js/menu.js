@@ -36,10 +36,12 @@ document.querySelector('.header__bot').addEventListener('click', e => {
 
 menu_btn.onclick = function () { // при нажатии на кнопку вызываем функцию в header__top
     visibleBtn(); // функция
+    _('body').classList.toggle('scroll-lock');
 };
 
 bot_btn.onclick = function () { // выполняем функцию по нажатию кнопки в header__bot
     visibleBtn(); // фунцкия
+    _('body').classList.toggle('scroll-lock');
 };
 
 _('.bot__nav-close').onclick = function () { // при клике стрелки скрытия меню вызываем функцию
@@ -53,6 +55,7 @@ menu_btn_close.onclick = function () { // при клике крестика в 
     }, 100);
     menu_btn.classList.toggle('active');
     closeMenuArrow();
+    _('body').classList.toggle('scroll-lock');
 };
 
 function replacePage() {
@@ -86,7 +89,7 @@ function nonedisplayMenu() {
 };
 
 function displayMenu() {
-    header_menu.style.cssText = 'display: inline-flex;';
+    header_menu.style.cssText = 'display: block;';
 }
 
 function deletePageAttr() {

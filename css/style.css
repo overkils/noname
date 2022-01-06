@@ -321,7 +321,8 @@ html {
     visibility: visible;
     opacity: 1;
     z-index: 9999;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .header__wrapper {
@@ -465,6 +466,7 @@ html {
 
     .header__wrapper {
         justify-content: start;
+        padding-bottom: 64px;
     }
 
     .header__menu-btn,
@@ -1028,6 +1030,9 @@ hr {
 }
 
 @media screen and (max-width: 375px) {
+    .menu__item {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 320px) {
