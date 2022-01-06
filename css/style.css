@@ -306,7 +306,7 @@ html {
 .header__menu {
     position: absolute;
     top: 120px;
-    left: 0;
+    width: 0;
     right: 0;
     z-index: -1;
     background-color: var(--bg-header);
@@ -314,7 +314,7 @@ html {
     visibility: hidden;
     overflow-x: hidden;
     opacity: 0;
-    transition: all 0.3s, transform 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
+    transition: all 0.3s, width 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
 }
 
 .header__menu.active {
@@ -366,6 +366,7 @@ html {
     line-height: 22px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s linear, color 0.3s linear;
+    white-space: pre;
 }
 
 .menu__link:hover {
@@ -426,16 +427,23 @@ html {
         padding: 49px 0 0 26px;
         left: 0;
         top: 94px;
-        width: 95vw;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
         height: 100vh;
         z-index: 9999;
         background: var(--bg-header);
-        transform: translateX(-100vw);
-        transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
+        transition: width 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s, opacity 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s,
+            visibility 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
     }
 
     .header__bot.active {
-        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header__bot.actives {
+        width: 95vw;
     }
 
     .top__item {
@@ -449,11 +457,10 @@ html {
 
     .header__menu {
         height: 100vh;
-        transform: translateX(100vw);
     }
 
     .header__menu.actives {
-        transform: translateX(0);
+        width: 100vw;
     }
 
     .header__wrapper {
@@ -949,7 +956,6 @@ hr {
     .header__menu {
         top: 73px;
         height: 100vh;
-        transform: translateX(100vw);
         overflow-x: hidden;
     }
 

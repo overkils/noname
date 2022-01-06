@@ -190,3 +190,34 @@
 .about__text-partn > p:not(:last-child) {
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 992px) {
+    .partn-sliders__items {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .partner__socials {
+        width: 75vw;
+        justify-content: space-between;
+    }
+
+    .partner__social:first-child > .social__title,
+    .partner__social:first-child > .social__links,
+    .partner__social:last-child > .social__links,
+    .partner__social:last-child > .social__title {
+        display: none;
+    }
+
+    .partner__social:first-child,
+    .partner__social:last-child {
+        padding-right: 47px;
+    }
+
+    .partner__img {
+        top: 14px;
+    }
+}

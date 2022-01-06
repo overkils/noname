@@ -14,9 +14,7 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     menuActive(); //выдача класса активности(открытого) меню
     setTimeout(menuActiveS, 100) // отображение меню на адаптив версии 
     replacePage(); // замена номера страницы в функции 
-    setTimeout(displayMenu, 10000);
     _('.bot__nav-title').textContent = e.target.textContent; // переносим название кнопки в тайтл меню
-    _('.bot__nav-title').classList.toggle('active'); // выдаем активность, хотя хз нахуя я это сделал
     e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
     e.target.classList.toggle('bot__btn-active'); // а тае же класс активности для стилей 
     //отключение предыдущей активной кнопки
@@ -49,7 +47,10 @@ _('.bot__nav-close').onclick = function () { // при клике стрелки
 };
 
 menu_btn_close.onclick = function () { // при клике крестика в меню вызываем функции по скрытию всех меню и под меню
-    _('.header__bot').classList.toggle('active'); //выдаем класс активности для открытия меню с выбором категории
+    _('.header__bot').classList.toggle('actives');
+    setTimeout(() => {
+        _('.header__bot').classList.toggle('active'); //выдаем класс активности для открытия меню с выбором категории
+    }, 100);
     menu_btn.classList.toggle('active');
     closeMenuArrow();
 };
@@ -60,6 +61,9 @@ function replacePage() {
 
 function visibleBtn() {
     _('.header__bot').classList.toggle('active'); //выдаем класс активности для открытия меню с выбором категории
+    setTimeout(() => {
+        _('.header__bot').classList.toggle('actives');
+    }, 100);
     menu_btn.classList.toggle('active'); // выдача класса активности меню что бы открыть меню и изменить стили
     removeActives();
 };
@@ -104,5 +108,4 @@ function removeActives() {
 
 function toggleBlock() {
     displayMenu();
-
 }
