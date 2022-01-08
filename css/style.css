@@ -306,7 +306,7 @@ html {
 .header__menu {
     position: absolute;
     top: 120px;
-    width: 0;
+    width: 100vw;
     right: 0;
     z-index: -1;
     background-color: var(--bg-header);
@@ -317,12 +317,10 @@ html {
     transition: all 0.3s, width 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
 }
 
-.header__menu.active {
+.header__menu[data-page] {
     visibility: visible;
     opacity: 1;
     z-index: 9999;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .header__wrapper {
@@ -428,23 +426,16 @@ html {
         padding: 49px 0 0 26px;
         left: 0;
         top: 94px;
-        width: 0;
-        opacity: 0;
-        visibility: hidden;
+        width: 95vw;
+        transform: translateX(-100vw);
         height: 100vh;
         z-index: 9999;
         background: var(--bg-header);
-        transition: width 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s, opacity 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s,
-            visibility 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1) 0.2s;
     }
 
     .header__bot.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .header__bot.actives {
-        width: 95vw;
+        transform: translateX(0);
     }
 
     .top__item {
@@ -457,7 +448,22 @@ html {
     }
 
     .header__menu {
+        width: 0;
         height: 100vh;
+    }
+
+    .header__menu[data-page] {
+        visibility: unset;
+        opacity: unset;
+        z-index: unset;
+    }
+
+    .header__menu.active {
+        visibility: visible;
+        opacity: 1;
+        z-index: 9999;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     .header__menu.actives {

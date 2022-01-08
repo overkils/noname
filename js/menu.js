@@ -3,20 +3,32 @@ var menu_btn = _('.header__menu-btn'); // поиск кнопки меню в he
 var bot_btn = _('.bot__menu-btn'); // поиск кнопки закрытия в нижнем меню
 var menu_btn_close = _('.bot__menu-btns'); // поиск кнопки закрытия в под меню
 var header_menu = _('.header__menu');
-header_menu.style.display = 'none'; // отключаем меню до его открытия
 
 document.querySelector('.header__bot').addEventListener('click', e => {
     //проверка наличия bot__link в bot__item
     if (!e.target.classList.contains('bot__btn')) return;
-    // переключение/отключение активной кнопки
-    data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
-    toggleBlock(); // выдаем меню block для того чтобы показать его
-    menuActive(); //выдача класса активности(открытого) меню
-    setTimeout(menuActiveS, 100) // отображение меню на адаптив версии 
-    replacePage(); // замена номера страницы в функции 
-    _('.bot__nav-title').textContent = e.target.textContent; // переносим название кнопки в тайтл меню
-    e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
-    e.target.classList.toggle('bot__btn-active'); // а тае же класс активности для стилей 
+
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            header_menu.style.display = 'none'; // отключаем меню до его открытия
+            data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
+            toggleBlock(); // выдаем меню block для того чтобы показать его
+            menuActive(); //выдача класса активности(открытого) меню
+            setTimeout(menuActiveS, 100) // отображение меню на адаптив версии 
+            replacePage(); // замена номера страницы в функции 
+            _('.bot__nav-title').textContent = e.target.textContent; // переносим название кнопки в тайтл меню
+            e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
+            e.target.classList.toggle('bot__btn-active'); // а тае же класс активности для стилей 
+        } else {
+            data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
+            replacePage(); // замена номера страницы в функции 
+            e.target.toggleAttribute('activitis'); // нажатой кнопке выдаем атрибут активности
+            e.target.classList.toggle('bot__btn-active'); // а тае же класс активности для стилей 
+        }
+    }
+    var x = window.matchMedia("(max-width: 992px)")
+    myFunction(x) // Call listener function at run time
+    x.addEventListener('change', myFunction) // Attach listener 
     //отключение предыдущей активной кнопки
     var activitis = document.querySelectorAll('.bot__btn-active');// ищем классы активности
     for (let i = 0; i < activitis.length; i++) { // перебираем активность и 
@@ -30,7 +42,14 @@ document.querySelector('.header__bot').addEventListener('click', e => {
     if (closet_menu === null) { // если его нету то
         deletePageAttr(); // убираем атрибут номера страницы и 
         setTimeout(removeActives, 800);
-        setTimeout(nonedisplayMenu, 400); // отключаем меню для того чтоб не захломлять не поточную позиционированность 
+        function myFunction(x) {
+            if (x.matches) { // а тут указываем то что должно работать после достижения какого либо брейкпоинта
+                setTimeout(nonedisplayMenu, 400); // отключаем меню для того чтоб не захломлять не поточную позиционированность
+            }
+        }
+        var x = window.matchMedia("(max-width: 700px)") // изменяем значение на то которое нужно для того чтоб скрипты работали
+        myFunction(x) // Call listener function at run time
+        x.addEventListener('change', myFunction) // Attach listener
     };
 });
 
@@ -49,10 +68,7 @@ _('.bot__nav-close').onclick = function () { // при клике стрелки
 };
 
 menu_btn_close.onclick = function () { // при клике крестика в меню вызываем функции по скрытию всех меню и под меню
-    _('.header__bot').classList.toggle('actives');
-    setTimeout(() => {
-        _('.header__bot').classList.toggle('active'); //выдаем класс активности для открытия меню с выбором категории
-    }, 100);
+    _('.header__bot').classList.toggle('active'); //выдаем класс активности для открытия меню с выбором категории
     menu_btn.classList.toggle('active');
     closeMenuArrow();
     _('body').classList.toggle('scroll-lock');
