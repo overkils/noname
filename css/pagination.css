@@ -5,7 +5,7 @@
     align-items: center;
     text-align: center;
     padding-bottom: 100px;
-    padding: 0 15px 100px 15px;
+    padding: 0 5px 100px 5px;
     margin-right: -20px;
 }
 
@@ -32,7 +32,13 @@
     padding-top: 6px;
 }
 
-.penultimate-page,
-.after-page {
-    display: none;
+.arrow-pagination.end-page {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 320px) {
+    .penultimate-page,
+    .after-page {
+        display: none;
+    }
 }
