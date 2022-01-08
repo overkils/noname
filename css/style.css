@@ -423,7 +423,7 @@ html {
         justify-content: start;
         align-items: start;
         position: absolute;
-        padding: 49px 0 0 26px;
+        padding: 49px 0 100px 26px;
         left: 0;
         top: 94px;
         width: 95vw;
@@ -435,6 +435,7 @@ html {
     }
 
     .header__bot.active {
+        overflow-y: scroll;
         transform: translateX(0);
     }
 
