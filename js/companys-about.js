@@ -1,3 +1,36 @@
+const partn_swiper = new Swiper('.partn__sliders', {
+    slidesPerView: 4,
+    spaceBetween: 6,
+    navigation: {
+        nextEl: '.partn__next',
+        prevEl: '.partn__prev',
+    },
+    scrollbar: {
+        el: ".swiper_scrollbar",
+        hide: true,
+    },
+    breakpoints: {
+        992: {
+            slidesPerView: 4,
+        },
+
+        569: {
+            slidesPerView: 3,
+        },
+
+        568: {
+            slidesPerView: 2,
+        },
+
+        320: {
+            slidesPerView: 1,
+        },
+    },
+});
+
+
+
+
 // "use strict"
 
 // const ratings = document.querySelectorAll('.rating');
@@ -35,7 +68,7 @@
 //         const ratingActiveWidth = index / 0.05;
 //         ratingActive.style.width = `${ratingActiveWidth}%`;
 //     }
-//     // Возможность указать оценку 
+//     // Возможность указать оценку
 //     function setRating(rating) {
 //         const ratingItems = rating.querySelectorAll('.rating__item');
 //         for (let index = 0; index < ratingItems.length; index++) {
@@ -104,29 +137,3 @@
 //     }
 // }
 
-const partn_swiper = new Swiper('.partn__sliders', {
-    slidesPerView: 4,
-    spaceBetween: 6,
-    navigation: {
-        nextEl: '.partn__next',
-        prevEl: '.partn__prev',
-    },
-    scrollbar: {
-        el: ".swiper_scrollbar",
-        hide: true,
-    },
-    breakpoints: {
-        992: {
-            slidesPerView: 4,
-        },
-
-        569: {
-            slidesPerView: 3,
-        },
-
-
-        320: {
-            slidesPerView: 1,
-        },
-    },
-});
