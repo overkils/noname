@@ -14,7 +14,6 @@ document.querySelector('.header__bot').addEventListener('click', e => {
             if (header_bot.classList.contains('active')) {
                 header_menu.style.display = 'none'; // отключаем меню до его открытия
                 data_pages = e.target.getAttribute('data-page'); // заносим в глобал переменную номер страницы
-                console.log(data_pages)
                 toggleBlock(); // выдаем меню block для того чтобы показать его
                 menuActive(); //выдача класса активности(открытого) меню
                 setTimeout(menuActiveS, 100) // отображение меню на адаптив версии 
@@ -96,7 +95,6 @@ function visibleBtn() {
 
 function closeMenuArrow() {
     data_pages = undefined;
-    console.log(data_pages);
     var closet_menu = document.querySelector('[activitis]'); // ищем атрибут активности на кнопках
     closet_menu.removeAttribute('activitis'); // удаляем атрибут активности с кнопок
     closet_menu.classList.toggle('bot__btn-active'); // убираем класс активности с кнопок
