@@ -366,12 +366,10 @@
 }
 
 .sample__poap-nav {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     background-color: #01010150;
     z-index: -1;
     display: none;
