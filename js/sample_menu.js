@@ -17,3 +17,30 @@ document.querySelector('.sample__nav').addEventListener('click', e => {
         }
     }
 })
+
+var poap_bg = _('.sample__poap-nav');
+var poap = _('.poap__nav');
+var btnOpen = _('.poap__openbtn');
+var btnClose = _('.poap__close-btn');
+
+btnOpen.onclick = function () {
+    btnOpen.classList.toggle('active');
+    activePoap();
+};
+
+function activePoap() {
+    _('body').classList.toggle('scroll-lock');
+    poap_bg.style.display = 'block';
+    setTimeout(() => {
+        poap_bg.classList.toggle('active');
+    }, 100);
+};
+
+btnClose.onclick = function () {
+    setTimeout(() => {
+        poap_bg.style.display = 'none';
+    }, 500);
+    poap_bg.classList.toggle('active');
+    btnOpen.classList.toggle('active');
+    _('body').classList.toggle('scroll-lock');
+}

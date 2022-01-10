@@ -108,8 +108,6 @@ var poap = _('.poap__nav');
 var btnOpen = _('.poap__openbtn');
 var btnClose = _('.poap__close-btn');
 
-// poap_bg.style.display = 'none';
-
 btnOpen.onclick = function () {
     btnOpen.classList.toggle('active');
     activePoap();

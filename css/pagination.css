@@ -1,12 +1,10 @@
 .pagination {
-    max-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-bottom: 100px;
     padding: 0 5px 100px 5px;
-    margin-right: -20px;
 }
 
 .pagination > a {

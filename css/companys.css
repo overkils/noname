@@ -216,10 +216,6 @@
         grid-template-columns: repeat(2, 180px);
     }
 
-    .poap__openbtn {
-        display: flex;
-    }
-
     .partn-sliders__items {
         max-width: 180px;
     }
@@ -227,6 +223,10 @@
     .partn-sliders__items > img {
         width: 75%;
         max-width: unset;
+    }
+
+    .poap__openbtn {
+        display: flex;
     }
 
     .sample__nav {

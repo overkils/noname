@@ -216,6 +216,7 @@
                     <h2 class="sample__title">
                         Спальня
                     </h2>
+                    <button class="poap__openbtn">Фильтры и сортировка</button>
                     <nav class="sample__nav">
                         <div class="sample__nav-item sample__type">
                             <div class="type__header">
@@ -374,12 +375,209 @@
                             </form>
                         </div>
                     </nav>
+                    <div class="sample__poap-nav">
+                        <div class="poap__nav">
+                            <div class="container">
+                                <span class="paop__title">Фильтры и сортировка</span>
+                                <button class="poap__close-btn"></button>
+                                <div class="block one">
+                                    <div class="block__item">
+                                        <div class="block__title">Тип</div>
+                                        <div class="block__text">
+                                            <form class="type__chosing">
+                                                <div class="type__container">
+                                                    <input type="checkbox" id="d-checkbox1" class="type__input">
+                                                    <label for="d-checkbox1" class="type__label">
+                                                        Комоды
+                                                    </label>
+                                                </div>
+                                                <div class="type__container">
+                                                    <input type="checkbox" id="d-checkbox2" class="type__input">
+                                                    <label for="d-checkbox2" class="type__label">
+                                                        Кровати
+                                                    </label>
+                                                </div>
+                                                <div class="type__container">
+                                                    <input type="checkbox" id="d-checkbox3" class="type__input">
+                                                    <label for="d-checkbox3" class="type__label">
+                                                        Матрасы
+                                                    </label>
+                                                </div>
+                                                <div class="type__container">
+                                                    <input type="checkbox" id="d-checkbox4" class="type__input">
+                                                    <label for="d-checkbox4" class="type__label">
+                                                        Прикраватные тумбы
+                                                    </label>
+                                                </div>
+                                                <button class="select__submit" type="submit">
+                                                    Применить
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="block__item">
+                                        <div class="block__title">Стоимость</div>
+                                        <div class="block__text">
+                                            <div class="box">
+                                                <form class="form" action="">
+                                                    <div class="form__fields">
+                                                        <input type="text" class="form__field form__field--from" />
+                                                        <span class="separator">-</span>
+                                                        <input type="text" class="form__field form__field--to" />
+                                                        <span class="sample__buy">грн</span>
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <input type="text" class="form__slider" value="" />
+                                                    </div>
+                                                    <div class="type__container">
+                                                        <input type="checkbox" id="d-checkbox5" class="type__input">
+                                                        <label for="d-checkbox5" class="type__label">
+                                                            Стоимость не задана
+                                                        </label>
+                                                    </div>
+                                                    <button class="select__submit" type="submit">
+                                                        Применить
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block__item">
+                                        <div class="block__title">Габариты</div>
+                                        <div class="block__text">
+                                            <div class="box">
+                                                <form class="form" action="">
+                                                    <span class="form__subtitle">
+                                                        Ширина
+                                                    </span>
+                                                    <div class="form__fields">
+                                                        <input type="text" class="form__field d-form__width--from" />
+                                                        <span class="separator">-</span>
+                                                        <input type="text" class="form__field d-form__width--to" />
+                                                        <span class="sample__buy">см</span>
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <input type="text" class="d-form__slider-width" value="" />
+                                                    </div>
+                                                    <span class="form__subtitle">
+                                                        Длинна
+                                                    </span>
+                                                    <div class="form__fields">
+                                                        <input type="text" class="form__field d-form__length--from" />
+                                                        <span class="separator">-</span>
+                                                        <input type="text" class="form__field d-form__length--to" />
+                                                        <span class="sample__buy">см</span>
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <input type="text" class="d-form__slider-length" value="" />
+                                                    </div>
+                                                    <span class="form__subtitle">
+                                                        Высота
+                                                    </span>
+                                                    <div class="form__fields">
+                                                        <input type="text" class="form__field d-form__height--from" />
+                                                        <span class="separator">-</span>
+                                                        <input type="text" class="form__field d-form__height--to" />
+                                                        <span class="sample__buy">см</span>
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <input type="text" class="d-form__slider-height" value="" />
+                                                    </div>
+                                                    <div class="type__container">
+                                                        <input type="checkbox" id="d-checkbox6" class="type__input">
+                                                        <label for="d-checkbox6" class="type__label">
+                                                            Габариты не заданы
+                                                        </label>
+                                                    </div>
+                                                    <button class="select__submit" type="submit">
+                                                        Применить
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block__item">
+                                        <div class="block__title">Сортировать по</div>
+                                        <div class="block__text">
+                                            <form class="type__chosing">
+                                                <div class="type__cont">
+                                                    <div class="radio__container">
+                                                        <input type="checkbox" id="d_radiobox1" class="radio__input">
+                                                        <label for="d_radiobox1" class="radio__label">
+                                                            Комоды
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio__container">
+                                                        <input type="checkbox" id="d_radiobox2" class="radio__input">
+                                                        <label for="d_radiobox2" class="radio__label">
+                                                            Кровати
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <button class="select__submit" type="submit">
+                                                    Применить
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="sample">
             <div class="container">
                 <div class="sample__first">
+                    <a href="#" class="sliders__items">
+                        <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
+                        <div class="items__stats">
+                            <span class="items__color">10 цветов</span>
+                            <span class="items__recalls">Отзывов 80</span>
+                        </div>
+                        <div class="items__param">
+                            <span class="items__name">Комод название мебели</span>
+                            <span class="items__prices">122 800 см</span>
+                        </div>
+                        <span class="items__discount">-30%</span>
+                    </a>
+                    <a href="#" class="sliders__items">
+                        <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
+                        <div class="items__stats">
+                            <span class="items__color">10 цветов</span>
+                            <span class="items__recalls">Отзывов 80</span>
+                        </div>
+                        <div class="items__param">
+                            <span class="items__name">Комод название мебели</span>
+                            <span class="items__prices">122 800 см</span>
+                        </div>
+                        <span class="items__discount">-30%</span>
+                    </a>
+                    <a href="#" class="sliders__items">
+                        <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
+                        <div class="items__stats">
+                            <span class="items__color">10 цветов</span>
+                            <span class="items__recalls">Отзывов 80</span>
+                        </div>
+                        <div class="items__param">
+                            <span class="items__name">Комод название мебели</span>
+                            <span class="items__prices">122 800 см</span>
+                        </div>
+                        <span class="items__discount">-30%</span>
+                    </a>
+                    <a href="#" class="sliders__items">
+                        <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
+                        <div class="items__stats">
+                            <span class="items__color">10 цветов</span>
+                            <span class="items__recalls">Отзывов 80</span>
+                        </div>
+                        <div class="items__param">
+                            <span class="items__name">Комод название мебели</span>
+                            <span class="items__prices">122 800 см</span>
+                        </div>
+                        <span class="items__discount">-30%</span>
+                    </a>
                     <a href="#" class="sliders__items">
                         <img src="image/cat_slide-img.png" alt="Изображение товара" class="items__img">
                         <div class="items__stats">
@@ -806,6 +1004,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="js/accord.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="js/search__items.js"></script>
     <script src="js/dynamicAdapt.js"></script>

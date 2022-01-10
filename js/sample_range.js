@@ -258,3 +258,194 @@ $(function () {
     });
 });
 
+$(function () {
+    var $range = $(".d-form__slider-width"),
+        $inputFrom = document.querySelector('.d-form__width--from'),
+        $inputTo = document.querySelector('.d-form__width--to'),
+        instance,
+        min = 0,
+        max = 100,
+        from = 0,
+        to = 0;
+
+    $range.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: min,
+        max: max,
+        from: 0,
+        to: 100,
+        hide_min_max: true,
+        hide_from_to: true,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+        $inputFrom.value = from;
+        $inputTo.value = to;
+        width = to;
+        _('.sample_title-width').textContent = to;
+    }
+
+    $inputFrom.addEventListener('input', function () {
+        var val = this.value;
+
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.addEventListener('input', function () {
+        var val = this.value;
+
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+
+        instance.update({
+            to: val
+        });
+    });
+});
+
+$(function () {
+    var $range = $(".d-form__slider-length"),
+        $inputFrom = document.querySelector(".d-form__length--from"),
+        $inputTo = document.querySelector(".d-form__length--to"),
+        instance,
+        min = 0,
+        max = 100,
+        from = 0,
+        to = 0;
+
+    $range.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: min,
+        max: max,
+        from: 0,
+        to: 100,
+        hide_min_max: true,
+        hide_from_to: true,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+        $inputFrom.value = from;
+        $inputTo.value = to;
+        length = to;
+        _('.sample_title-length').textContent = to;
+    }
+
+    $inputFrom.addEventListener('input', function () {
+        var val = this.value
+
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.addEventListener('input', function () {
+        var val = this.value
+
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+
+        instance.update({
+            to: val
+        });
+    });
+});
+
+$(function () {
+    var $range = $(".d-form__slider-height"),
+        $inputFrom = document.querySelector(".d-form__height--from"),
+        $inputTo = document.querySelector(".d-form__height--to"),
+        instance,
+        min = 0,
+        max = 100,
+        from = 0,
+        to = 0;
+
+    $range.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: min,
+        max: max,
+        from: 0,
+        to: 100,
+        hide_min_max: true,
+        hide_from_to: true,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+        $inputFrom.value = from;
+        $inputTo.value = to;
+        height = to;
+        _('.sample_title-height').textContent = to;
+    }
+
+    $inputFrom.addEventListener('input', function () {
+        var val = this.value;
+
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.addEventListener('input', function () {
+        var val = this.value;
+
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+
+        instance.update({
+            to: val
+        });
+    });
+});
