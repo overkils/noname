@@ -1,5 +1,7 @@
+var page__number = __('.perview__slide').length;
+
 var preview__picture = new Swiper('.price__picture-preview', {
-    slidesPerView: 4,
+    slidesPerView: page__number,
     spaceBetween: 24,
     freeMode: true,
     watchSlidesProgress: true,
