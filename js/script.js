@@ -31,6 +31,10 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
     breakpoints: {
         1200: {
             slidesPerView: 4,
+            navigation: {
+                nextEl: '.catalog__next',
+                prevEl: '.catalog__prev',
+            },
         },
         992: {
             navigation: {
