@@ -36,11 +36,12 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
                 prevEl: '.catalog__prev',
             },
         },
-        992: {
+        991: {
             navigation: {
                 nextEl: '.catalog__next',
                 prevEl: '.catalog__prev',
-            }
+            },
+            slidesPerView: 3,
         },
         768: {
             slidesPerView: 3,
