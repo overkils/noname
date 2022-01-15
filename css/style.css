@@ -969,7 +969,6 @@ hr {
     }
 
     .sliders__items {
-        max-width: unset;
         padding: 36px 16px 26px 16px;
         margin: 0 14px;
         max-width: 259px;
@@ -1030,6 +1029,15 @@ hr {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .sliders__items {
+        max-width: 206px;
+        margin: 0 3px;
+    }
+
+    .items__img {
+        width: 75%;
     }
 }
 
