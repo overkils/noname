@@ -29,12 +29,12 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
         hide: true,
     },
     breakpoints: {
-        1200: {
-            slidesPerView: 4,
-            navigation: {
-                nextEl: '.catalog__next',
-                prevEl: '.catalog__prev',
-            },
+        320: {
+            slidesPerView: 1,
+            navigation: false,
+        },
+        768: {
+            slidesPerView: 3,
         },
         991: {
             navigation: {
@@ -43,12 +43,12 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
             },
             slidesPerView: 3,
         },
-        768: {
-            slidesPerView: 3,
-        },
-        320: {
-            slidesPerView: 2,
-            navigation: false,
+        1200: {
+            slidesPerView: 4,
+            navigation: {
+                nextEl: '.catalog__next',
+                prevEl: '.catalog__prev',
+            },
         },
     }
 });
@@ -61,6 +61,14 @@ const partn_swiper = new Swiper('.partn__sliders', {
         hide: true,
     },
     breakpoints: {
+        320: {
+            navigation: false,
+        },
+
+        768: {
+            slidesPerView: 3,
+        },
+
         992: {
             slidesPerView: 4,
             navigation: {
@@ -68,14 +76,6 @@ const partn_swiper = new Swiper('.partn__sliders', {
                 prevEl: '.partn__prev',
             },
         },
-
-        768: {
-            slidesPerView: 3,
-        },
-
-        320: {
-            navigation: false,
-        }
     }
 });
 

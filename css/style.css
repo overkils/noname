@@ -1042,6 +1042,9 @@ hr {
 }
 
 @media screen and (max-width: 568px) {
+    .sliders__items {
+        max-width: 230px;
+    }
 }
 
 @media screen and (max-width: 375px) {
