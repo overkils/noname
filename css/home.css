@@ -149,7 +149,9 @@
     position: absolute;
     z-index: 3;
     bottom: 2%;
-    left: 22%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .catalog__tickets:first-child > svg {
@@ -406,20 +408,12 @@
 }
 
 @media screen and (max-width: 992px) {
-    /* .catalog__ticket {
-        flex-direction: column;
-        align-items: center;
-    } */
+    .catalog__tickets {
+        max-height: 300px;
+    }
 
-    /* .catalog__tickets {
-        margin-right: unset !important;
-        margin-bottom: 20px;
-        max-width: 768px; 
-    } */
-
-    .catalog__tickets:first-child > .tickets__img {
-        left: 19.5%;
-        width: 60%;
+    .tickets__title {
+        font-size: 25px;
     }
 
     .controls__arrow {
@@ -437,16 +431,88 @@
     .help {
         background-position-x: center;
     }
+
+    .catalog__tickets:first-child > .tickets__img {
+        width: 55%;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .tickets__question {
+        top: 15px;
+        right: 15px;
+    }
+
+    .catalog__tickets {
+        max-height: 260px;
+    }
+
+    .header-slider > .container {
+        max-width: 568px;
+    }
+
+    .slider__item {
+        height: 100vh;
+    }
+
+    .slider__items {
+        height: 100vh;
+    }
 }
 
 @media screen and (max-width: 568px) {
+    .catalog__ticket {
+        flex-direction: column;
+    }
+
+    .catalog__tickets {
+        max-height: 320px;
+    }
+
+    .catalog__tickets:first-child {
+        margin-bottom: 15px;
+    }
+
+    .header-slider > .container {
+        max-width: 375px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .help {
+        background-position-x: 63%;
+    }
+
+    .slider__items {
+        background-position-x: 10%;
+    }
 }
 
 @media screen and (max-width: 375px) {
+    .header-slider > .container {
+        max-width: 320px;
+    }
+
+    .catalog__tickets {
+        max-height: 290px;
+    }
+
+    .catalog__tickets:first-child > .tickets__img {
+        bottom: 8%;
+    }
 }
 
 @media screen and (max-width: 320px) {
+    .tickets__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .catalog__tickets {
+        max-height: 272px;
+    }
+
+    .catalog__tickets:first-child > .tickets__img {
+        bottom: 5%;
+    }
 }

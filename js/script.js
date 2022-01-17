@@ -33,6 +33,11 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
             slidesPerView: 1,
             navigation: false,
         },
+
+        425: {
+            slidesPerView: 2,
+        },
+
         768: {
             slidesPerView: 3,
         },
@@ -63,6 +68,11 @@ const partn_swiper = new Swiper('.partn__sliders', {
     breakpoints: {
         320: {
             navigation: false,
+            slidesPerView: 1,
+        },
+
+        425: {
+            slidesPerView: 2,
         },
 
         768: {

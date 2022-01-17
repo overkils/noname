@@ -551,15 +551,6 @@
         width: 90%;
     }
 
-    .ideas__tickets {
-        flex-direction: column;
-    }
-
-    .ideas__ticket:not(:last-child) {
-        margin-right: unset;
-        margin-bottom: 15px;
-    }
-
     .price__feature {
         grid-template-columns: 144px 1fr;
         grid-gap: 20px 0;

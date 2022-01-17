@@ -554,7 +554,6 @@ html {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-    max-width: 260px;
 }
 
 .items__color {
@@ -698,6 +697,7 @@ html {
 }
 
 .form__input-btn {
+    border-color: transparent;
     background-color: var(--color-text);
     color: #fff;
     max-width: 211px;
@@ -1039,11 +1039,54 @@ hr {
     .items__img {
         width: 75%;
     }
+
+    .help-form__text {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .help__form {
+        margin-left: unset;
+        margin: 0 auto;
+    }
+
+    .help-form > .container {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 568px) {
     .sliders__items {
         max-width: 230px;
+    }
+
+    .help-form__title {
+        font-size: 16px;
+    }
+
+    .ideas__tickets {
+        flex-direction: column;
+    }
+
+    .ideas__ticket:not(:last-child) {
+        margin-right: unset;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .items__img-partn {
+        width: 80%;
+    }
+
+    .items__img {
+        width: 65%;
+    }
+
+    .sliders__items {
+        max-width: 179px;
+        padding: 26px 6px;
     }
 }
 
@@ -1051,7 +1094,35 @@ hr {
     .menu__item {
         grid-template-columns: 1fr;
     }
+
+    .help-form__text {
+        justify-content: space-between;
+    }
+
+    .help-form__title {
+        margin-right: unset;
+    }
+
+    .sliders__items {
+        max-width: 328px;
+    }
+
+    .items__recalls,
+    .items__color {
+        font-size: 16px;
+    }
+
+    .items__name {
+        font-size: 18px;
+    }
+
+    .items__prices {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 320px) {
+    .sliders__items {
+        max-width: 272px;
+    }
 }

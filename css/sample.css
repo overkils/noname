@@ -494,21 +494,6 @@
         grid-template-columns: repeat(2, 295px);
     }
 
-    .help-form > .container {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .help__form {
-        margin-left: unset;
-        margin: 0 auto;
-    }
-
-    .help-form__text {
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
     .sample__nav {
         display: none;
     }
