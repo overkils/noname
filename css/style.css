@@ -703,7 +703,6 @@ html {
     color: #fff;
     max-width: 211px;
     width: 100%;
-    -webkit-appearance: none;
     appearance: none;
     border-radius: 0;
 }
