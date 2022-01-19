@@ -39,10 +39,12 @@ button {
   border: none;
   cursor: pointer;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 input[type="submit"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 body,
