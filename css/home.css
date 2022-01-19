@@ -60,6 +60,7 @@
     text-align: center;
     width: 175px;
     height: 50px;
+    color: #000;
     transition: color 0.3s;
 }
 
@@ -257,6 +258,7 @@
     max-height: 50px;
     height: 100vh;
     text-align: center;
+    color: #000;
     background-color: #fff;
 }
 

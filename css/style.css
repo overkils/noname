@@ -220,6 +220,7 @@ html {
 }
 
 .bot__btn {
+    color: #000;
     font-weight: 600;
     font-size: calc(15px + 1 * ((100vw - 320px) / var(--wdith-Screen)));
     line-height: 22px;
@@ -702,6 +703,7 @@ html {
     color: #fff;
     max-width: 211px;
     width: 100%;
+    -webkit-appearance: none;
     appearance: none;
     border-radius: 0;
 }
