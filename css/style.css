@@ -702,6 +702,8 @@ html {
     color: #fff;
     max-width: 211px;
     width: 100%;
+    appearance: none;
+    border-radius: 0;
 }
 
 .ideas-to-home {
@@ -877,14 +879,15 @@ html {
 }
 
 .nav__links {
+    color: #f8f6fb;
     line-height: 22px;
     border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s, color 0.3s;
+    transition: border-bottom 0.3s;
+    padding-bottom: 5px;
 }
 
 .nav__links:hover {
-    border-bottom: 1px solid #000;
-    color: #000;
+    border-bottom: 1px solid #f8f6fb;
 }
 
 .footer__coopyright {
