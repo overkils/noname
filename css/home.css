@@ -336,7 +336,7 @@
 }
 
 .poap__input {
-    width: 452px;
+    width: 100%;
     margin-bottom: 10px;
     border: 1px solid #999;
     color: #999;
@@ -397,6 +397,7 @@
 
 .success__alt-text {
     color: #999;
+    text-align: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -488,6 +489,10 @@
     .slider__items {
         background-position-x: 10%;
     }
+
+    .poap__help {
+        max-width: 375px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -501,6 +506,14 @@
 
     .catalog__tickets:first-child > .tickets__img {
         bottom: 8%;
+    }
+
+    .poap__help {
+        max-width: 320px;
+    }
+
+    .success__title {
+        font-size: 26px;
     }
 }
 
@@ -516,5 +529,19 @@
 
     .catalog__tickets:first-child > .tickets__img {
         bottom: 5%;
+    }
+
+    .poap__help {
+        max-width: 280px;
+        max-height: 500px;
+    }
+
+    .success__title {
+        font-size: 22px;
+    }
+
+    .success__subtitle,
+    .success__alt-text {
+        font-size: 14px;
     }
 }
