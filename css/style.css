@@ -705,6 +705,7 @@ html {
     width: 100%;
     appearance: none;
     border-radius: 0;
+    cursor: pointer;
 }
 
 .ideas-to-home {
@@ -713,6 +714,8 @@ html {
 }
 
 .ideas__title {
+    font-family: var(--ff-varta);
+    font-weight: 400;
     font-size: calc(25px + 15 * ((100vw - 320px) / var(--wdith-Screen)));
     line-height: 58px;
     margin-bottom: 8px;
@@ -1080,17 +1083,42 @@ hr {
 }
 
 @media screen and (max-width: 425px) {
-    .items__img-partn {
-        width: 80%;
-    }
-
-    .items__img {
-        width: 65%;
-    }
-
     .sliders__items {
-        max-width: 179px;
-        padding: 26px 6px;
+        max-width: 177px;
+        min-width: unset;
+        padding: 26px 8px 16px 8px;
+    }
+
+    .items__stats > span {
+        font-size: 14px;
+    }
+
+    .items__name {
+        font-size: 15px;
+    }
+
+    .items__prices {
+        font-size: 20px;
+    }
+
+    .items__img-partn {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .sliders__items {
+        max-width: 172px;
+    }
+
+    .partn-sliders__items {
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .sliders__items {
+        max-width: 346px;
     }
 }
 
@@ -1107,26 +1135,20 @@ hr {
         margin-right: unset;
     }
 
+    .items__stats {
+        max-width: unset;
+    }
+
     .sliders__items {
-        max-width: 328px;
-    }
-
-    .items__recalls,
-    .items__color {
-        font-size: 16px;
-    }
-
-    .items__name {
-        font-size: 18px;
-    }
-
-    .items__prices {
-        font-size: 22px;
+        max-width: 331px;
+        min-width: unset;
+        padding: 26px 8px 16px 8px;
     }
 }
 
 @media screen and (max-width: 320px) {
     .sliders__items {
-        max-width: 272px;
+        max-width: 262px;
+        padding: 26px 15px;
     }
 }

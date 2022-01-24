@@ -515,6 +515,14 @@
     .success__title {
         font-size: 26px;
     }
+
+    .poap__subtitle {
+        font-size: 12px;
+    }
+
+    .poap__title {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -543,5 +551,9 @@
     .success__subtitle,
     .success__alt-text {
         font-size: 14px;
+    }
+
+    .header-slider > .container {
+        max-width: 260px;
     }
 }

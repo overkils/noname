@@ -28,16 +28,15 @@ const catalog_swiper = new Swiper('.catalog__sliders', {
         el: ".swiper__scrollbar",
         hide: true,
     },
+    cssMode: true,
     breakpoints: {
         320: {
             slidesPerView: 1,
             navigation: false,
         },
-
-        425: {
+        414: {
             slidesPerView: 2,
         },
-
         768: {
             slidesPerView: 3,
         },
@@ -71,7 +70,7 @@ const partn_swiper = new Swiper('.partn__sliders', {
             slidesPerView: 1,
         },
 
-        425: {
+        414: {
             slidesPerView: 2,
         },
 
